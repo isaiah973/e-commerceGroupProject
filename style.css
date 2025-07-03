@@ -61,12 +61,12 @@ object-fit:contain;
 #productList {
   animation: slideUp1 both;
   animation-timeline: view();
- animation-range: entry 10% cover 10%;
+ animation-range: entry 40% cover 40%;
 }
 @keyframes slideUp1 {
   from{ 
     opacity: 0;
-    transform: translateY(500px);
+    transform: translateY(300px);
   }
   to{
     opacity: 1;
