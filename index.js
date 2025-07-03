@@ -468,12 +468,27 @@ const data = [
   },
 ]
 
+//Generate Random items(3) for Popular Picks
+const random1 = Math.floor(Math.random()*10);
+const below10 = data[random1]
 
-function displayProducts(data) {
+const random2 = Math.floor(Math.random()*10+10);
+const above10 = data[random2];
+
+const random3 = Math.floor(Math.random()*10+(10+10));
+const above20 = data[random3];
+
+console.log(below10)
+console.log(above10)
+console.log(above20)
+
+const randomData = [below10, above10, above20];
+
+function displayProducts(randomData) {
   const list = document.getElementById("productList");
   list.innerHTML = "";
 
-  data.forEach((d) => {
+  randomData.forEach((d) => {
     const li = document.createElement("li");
     li.className = "product";
     
@@ -499,4 +514,39 @@ function displayProducts(data) {
 }
 
 
-window.addEventListener("DOMContentLoaded", displayProducts(data));
+window.addEventListener("DOMContentLoaded", displayProducts(randomData));
+
+
+//For rendering all items in data
+
+// function displayProducts(data) {
+//   const list = document.getElementById("productList");
+//   list.innerHTML = "";
+
+//   data.forEach((d) => {
+//     const li = document.createElement("li");
+//     li.className = "product";
+    
+//     li.innerHTML = `
+//     <div class="w-[270px] shadow-lg pb-4 flex flex-col items-center justify-center mb-[70px]">
+//       <div class="flex items-center justify-center w-[100%] h-[300px] bg-white border-[5px] border-[#36454F] rounded-[1px]">
+//           <img src="${d.image}" alt="">
+//       </div>
+
+//       <p class="px-5 text-[18px] text-[#36454F] font-bold mt-7 text-center">${d.title}</p>
+
+//       <p class="text-center mt-4 text-2xl font-extralight">$${d.price}</p>
+
+//       <div class="flex items-center justify-center mt-5">
+//         <button class="border-[2px] border-[#36454F] text-[15px] px-3 py-1 hover:bg-[#6d898e]">ADD TO CART</button>
+//       </div>
+//      </div>
+//        `;
+//     list.appendChild(li);
+
+  
+//   });
+// }
+
+
+// window.addEventListener("DOMContentLoaded", displayProducts(data));
