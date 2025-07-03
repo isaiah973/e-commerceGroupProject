@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <title>Buyer Login</title>
+</head>
+<body class="flex items-center justify-center">
+  <div class="flex flex-col w-[500px] h-[450px] border-2 border-gray px-5 py-5 font-[Roboto] mt-[55px] rounded-[9px]" id="container">
+    <h2 class="text-center mb-4 text-2xl font-semibold">Log in</h2>
+
+    <form class="flex flex-col" action="">
+      <label class="text-gray-400">Enter Email</label>
+      <input id="email-input" class="px-2 outline-none h-10 border-[1px] border-gray-300" type="email">
+      <p id="emailErrMsg" class="text-sm text-red-500"></p>
+
+      <label class="mt-5 text-gray-400" for="">Enter Password</label>
+      <input id="password-input" class="px-2 outline-none h-10 border-[1px] border-gray-300" type="password">
+
+    </form>
+    <button id="login-btn" class="mt-7 border-2 border-black h-10 font-semibold bg-[#353935] text-white ">Log in</button>
+
+    <a class="text-end mt-1 text-teal-700" href=""><span>Forgotten password?</span></a>
+    <a href=""><p class="text-center mt-[30px] text-[14px] mb-1">Don't have an account?</p>
+</a>
+    <a class="bg-teal-500 py-[6px] text-white font-[Roboto] text-center" href="usersignup.html"><button id="create-btn">Create account</button></a>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>

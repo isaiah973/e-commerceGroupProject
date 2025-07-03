@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Document</title>
+</head>
+<body>
+
+  <nav class="bg-teal-500 h-[5vh] w-full">
+
+    </nav>
+  <section class="px-5 py-5 ">
+    
+    
+      <div class="flex flex-row space-x-5  h-[75vh]">
+        <div class="w-[17%] h-full rounded-[10px] bg-white">
+          <ul class="py-5 flex flex-col">
+
+            <li class="cursor-pointer py-2 pl-4 flex items-baseline bg-white relative hover:bg-gray-300"><img class="w-6" src="images/bag.png" alt=""><p class="absolute left-[55px] top-[12px]">My Account</p></li>
+
+            <li class="cursor-pointer py-2 pl-4 flex items-baseline bg-white relative hover:bg-gray-300"><img class="w-6" src="images/bag.png" alt=""><p class="absolute left-[55px] top-[12px]">Orders</p></li>
+
+            <li class="cursor-pointer py-2 pl-4 flex items-baseline bg-white relative hover:bg-gray-300"><img class="w-6" src="images/messages.png" alt=""><p class="absolute left-[55px] top-[12px]">Inbox</p></li>
+
+            <li class="cursor-pointer py-2 pl-4 flex items-baseline bg-white relative hover:bg-gray-300"><img class="w-6" src="images/discount-coupon.png" alt=""><p class="absolute left-[55px] top-[12px]">Voucher</p></li>
+
+            <li class="cursor-pointer py-2 pl-4 flex items-baseline bg-white relative hover:bg-gray-300"><img class="w-6" src="images/heart.png" alt=""><p class="absolute left-[55px] top-[12px]">Wishlist</p></li>
+
+            
+
+          </ul>
+        </div>
+
+        <div class="w-full bg-gr-50 h-full rounded-[10px] px-5 py-2 flex flex-col">
+          <h1 class="ml-14 text-[20px]">Account Overview</h1>
+          <hr class="mb-3">
+          
+          <div class="flex h-[100%] space-x-3">
+            <div class="bg-[#b2d8d8] w-[50%] h-[60%] shadow-md rounded-[10px] p-3">
+                  <p class="text-[17px]">ACCOUNT DETAILS</p>
+                  <hr>
+                  
+
+                  <div class="flex gap-2">
+                    <p id="nameCell"></p>
+                    <p id="lastnameCell"></p>
+                  </div>
+                   
+                  <p class="mt-3">Your Email:</p>
+                  <p id="emailCell"></p>
+                  
+
+                  
+
+            </div>
+
+            <div class="bg-[#b2d8d8] border-[1px] shadow-md w-[50%] h-[60%] rounded-[10px] p-3">
+                  <p class="text-[17px]">ADDRESS BOOK</p>
+                  <hr>
+                  
+                  <p class="mt-4 mb-1">Your default shipping address:</p>
+                  <p id="addressCell" class="mb-3"></p> 
+                  <p>Your phone Number:</p>
+                  <p id="phoneCell"></p> 
+                
+            </div>
+          </div>
+
+        </div>
+      </div>
+   
+  </section>
+  
+       
+
+      
+      <!-- <p id="passwordCell"></p> -->
+      
+  
+  
+ 
+  <script> 
+    // Get the URL parameters 
+    const urlParams = new URLSearchParams(window.location.search); 
+    const name = urlParams.get("name"); 
+    const lastName = urlParams.get("lastname");
+    const email = urlParams.get("email");
+    const address = urlParams.get("address");
+    const phone = urlParams.get("phone"); 
+    const password = urlParams.get("password1");
+ 
+    // Display the values in the table cells 
+    document.getElementById("nameCell").textContent = name; 
+    document.getElementById("lastnameCell").textContent = lastName; 
+    document.getElementById("emailCell").textContent = email; 
+    document.getElementById("phoneCell").textContent = phone; 
+        document.getElementById("addressCell").textContent = address; 
+
+    document.getElementById("passwordCell").textContent = password; 
+  </script> 
+
+ 
+</body>
+</html>

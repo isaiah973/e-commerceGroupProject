@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="signup.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Document</title>
+</head>
+<body>
+  <nav class="bg-teal-500 h-[5vh] w-full mb-5">
+
+  </nav>
+  <section id="signup-container" class="px-5">
+    
+  <div class=" flex h-[80vh] m">
+   
+
+    <form class="flex flex-col px-3 py-7 items-center justify-center w-[40%] h-[100%] space-y-4" id="myform" action="userprofile.html" method="get">
+    
+    <div class="flex space-x-2 w-[100%]">
+      <input class="pl-1 border-[1px] border-gray-400 h-10 w-[50%]" placeholder="Enter your name" type="text" id="name" name="name">
+
+      <input class="pl-1 border-[1px] border-gray-400 h-10 w-[50%]" placeholder="Enter your last name"type="text" id="lastname" name="lastname">
+    </div>
+
+    <div class="flex flex-col gap-2 w-full " >
+      <input class=" pl-1 border-[1px] border-gray-400 h-10" placeholder="Enter your email"type="email" id="email" name="email"> 
+
+      <input class="pl-1 border-[1px] border-gray-400 h-10" placeholder="Enter your phone number"type="number" id="phone" name="phone">
+      
+      <input class="pl-1 border-[1px] border-gray-400 h-10" placeholder="Enter your address"type="text" id="address" name="address">
+
+      <input class="pl-1 border-[1px] border-gray-400 h-10" placeholder="Enter your password"type="password" id="password1" name="password">
+
+      <input class="pl-1 border-[1px] border-gray-400 h-10" placeholder="Confirm your password"type="password" id="password2" name="password">
+
+    </div>
+    <a class="bg-[#353935] w-[100%] py-3 text-center text-white" href="userprofile.html"><button type="submit">Continue</button></a>
+
+    <div class="flex flex-col space-y-3">
+      <p>By creating an account, you agree to our <span class="text-teal-500">Condition of Use</span> and <span class="text-teal-500">Privacy Notice.</span></p>
+
+      <a href="login.html"><p>Already have an account? <span class="text-teal-500">Log in</span></p></a>
+    </div>
+  </form>
+
+   <div class="bg-teal-500 w-[60%] h-[80vh]">
+     <img class="w-full h-full" src="images/signuppix.avif" alt="">
+    </div>
+  </div>
+</section>
+</body>
+</html>
