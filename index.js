@@ -494,7 +494,7 @@ function displayProducts(randomData) {
     
     li.innerHTML = `
     <div class="w-[270px] shadow-lg pb-4 flex flex-col items-center justify-center mb-[70px]">
-      <div class="flex items-center justify-center w-[100%] h-[300px] bg-white border-[5px] border-[#36454F] rounded-[1px]">
+      <div class="flex items-center justify-center w-[100%] h-[300px] bg-white border-[5px] border-[#ffd700] rounded-[1px]">
           <img src="${d.image}" alt="">
       </div>
 
@@ -503,7 +503,7 @@ function displayProducts(randomData) {
       <p class="text-center mt-4 text-2xl font-extralight">$${d.price}</p>
 
       <div class="flex items-center justify-center mt-5">
-        <button class="border-[2px] border-[#36454F] text-[15px] px-3 py-1 hover:bg-[#6d898e]">ADD TO CART</button>
+        <button class="border-[2px] border-[teal] text-[15px] px-3 py-1 hover:bg-[#6d898e]">ADD TO CART</button>
       </div>
      </div>
        `;
