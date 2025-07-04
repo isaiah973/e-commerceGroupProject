@@ -503,7 +503,7 @@ function displayProducts(randomData) {
       <p class="text-center mt-4 text-2xl font-extralight">$${d.price}</p>
 
       <div class="flex items-center justify-center mt-5">
-        <button class="border-[2px] border-[teal] text-[15px] px-3 py-1 hover:bg-[#6d898e]">ADD TO CART</button>
+        <button class="border-[2px] border-[#82878a] text-[15px] px-3 py-1 hover:bg-[#6d898e]">ADD TO CART</button>
       </div>
      </div>
        `;
