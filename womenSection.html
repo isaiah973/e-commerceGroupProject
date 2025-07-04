@@ -15,9 +15,37 @@
   <link rel="stylesheet" href="style.css">
   <title>Document</title>
 </head>
-<body>
-    <h1 class="mt-[500px]">WOMEN</h1>
-    <article class="bg-[#FAF9F6] px-[40px] flex items-center justify-center mt-[200px]">
+
+<body class=" bg-[#FAF9F6]">
+   <nav class="flex gap-[230px] bg-white shadow-lg h-[7vh] px-[100px] justify-center font-medium items-center">
+    <div class="flex space-x-10 items-center justify-center text-[#4b4a44] text-[16px]">
+      <a href="womenSection.html"><p>Women</p></a>
+      <a href=""><p>Men</p></a>
+      <a href=""><p>Jewellery</p></a>
+    </div>
+
+    <a href="index.html"><div class="flex flex-col"><p class="text-center m-auto font-bold text-2xl">PAGATTS</p><div class="bg-[#ffd700] h-[4px] w-[107px]"></div></div>
+    </a>
+
+    <div class="flex space-x-4 items-center">
+      <div class="flex"><input placeholder="Search" type="text" class="text-gray-400 border-[1px] border-gray-300 outline-none mr-1 pl-2 placeholder:text-sm"><button class="border-[1px] border-gray-300 ml-[-5px] pl-[1px] flex items-center justify-cente"><img class="w-[18px] " src="images/search (1).png" alt=""></button></div>
+     <div class="">
+       <div class="flex gap-5 items-center justify-center">
+        <a class="" href="login.html"><img class="w-[22px]" src="images/icons8-user-32.png" alt=""></a>
+        <a href="cart.html"><img class="w-[20px]" src="images/shopping-cart.png" alt=""></a>
+        <a href="cart.html"><img class="w-[20px]" src="images/icons8-contact-50 (1).png" alt=""></a>
+        
+      </div>
+      <div class="bg-[#ffd700] h-[4px] w-[107px] mt-[1px]"></div>
+     </div>
+     <p></p>
+    </div>
+    
+  </nav>
+
+<section class="px-10">
+  <h1 class="mt-[100px] text-2xl text-gray-400 font-semibold">WOMEN</h1>
+  <article class="bg-[#FAF9F6] px-[40px] flex items-center justify-center mt-[20px]">
       <ul id="womenList" class="bg-[#FAF9F6]  flex items-center justify-around flex-wrap space-x-10">
        
         <!-- <li class="w-[300px] h-[400px] p-[10px]">
@@ -26,6 +54,7 @@
         
       </ul>
 </article>
+</section>
 
   <script>
     const data = [
