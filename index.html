@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="style.css">
   <title>Document</title>
 </head>
-<body>
+<body class="">
   <nav class="flex gap-[230px] bg-whitesmoke h-[7vh] px-[100px] justify-center font-medium items-center">
     <div class="flex space-x-10 items-center justify-center text-[#4b4a44] text-[16px]">
       <a href="women.html"><p>Women</p></a>
@@ -23,8 +23,9 @@
       <a href="jewellery.html"><p>Jewellery</p></a>
     </div>
 
-    <a href="index.html"><div class="flex flex-col"><p class="text-center m-auto font-bold text-2xl">PAGATTS</p><div class="bg-[#ffd700] h-[4px] w-[107px]"></div></div>
-</a>
+    <a href="index.html"><div class="flex flex-col"><p class="text-center m-auto font-bold text-2xl">PAGATTS</p>
+    <div id="pagatts-slide" class="animate-ping bg-[#ffd700] h-[4px] w-[107px]"></div></div>
+    </a>
     <div class="flex space-x-3 items-center">
       <div class="flex"><input placeholder="Search" type="text" class="text-gray-400 border-[1px] border-gray-300 outline-none mr-[5px] pl-2 placeholder:text-sm"><button class="border-[1px] border-gray-300 ml-[-5px] pl-[1px] flex items-center justify-cente"><img class="w-[18px] " src="images/search (1).png" alt=""></button></div>
      <div class="">
@@ -45,12 +46,12 @@
     <div class="bg-[#cdd3d3] w-full h-[93vh] relative">
         
     </div>
-    <div class="absolute top-[21%] left-[160px] z-10 border-[4px] border-[#ffd700] p-[2%]">
-      <p class="text-lg font-medium">FROM $19.90</p>
+    <div id="autumn-box" class="absolute top-[21%] left-[160px] z-10 border-[4px] border-[#ffd700] p-[2%]">
+      <p class="text-lg font-medium">FROM $39.90</p>
       <p class="text-[50px]">2025</p>
       <p class="text-[70px] w-[430px]">AUTUMN</p>
       <p class="text-[70px] w-[430px]">COLLECTION</p>
-      <Button class="bg-black text-white py-3 px-5">Shop NOW!</button>
+      <a href="discount.html"><Button class="bg-black text-white py-3 px-5">Shop NOW!</button></a>
     </div>
     <img id="heroImage" class="mr-[] h-[93vh] w-[60%] absolute top-[7vh] right-0" src="images/pexels-tima-miroshnichenko-7202766.jpg" alt="">
 
@@ -69,6 +70,10 @@
       
     </ul>
 </article>
+
+<div class="absolute w-[500px] h-[500px] bg-red-400">
+
+</div>
   <script src="index.js"></script>
 </body>
 </html>

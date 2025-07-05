@@ -2,15 +2,17 @@
   font-family: Raleway, sans-serif;
 }
 
-/* #container {
- animation: slideIn 2s forwards;
+#autumn-box {
+ animation: slideIn 3s forwards;
 scroll-behavior: smooth;
        
 }
  @keyframes slideIn {
   from{ margin-top: 150px; font-family: Roboto; opacity: 0;}
   to{margin-top: 50px;}
-}; */
+};
+
+
 #product {
   width: 250px;
   height: 370px;
@@ -58,12 +60,12 @@ object-fit:contain;
 /* 
 
 }; */
-/* #productList {
+#productList {
   animation: slideUp1 both;
   animation-timeline: view();
  animation-range: entry 40% cover 40%;
-} */
-/* @keyframes slideUp1 {
+}
+@keyframes slideUp1 {
   from{ 
     opacity: 0;
     transform: translateY(300px);
@@ -73,4 +75,4 @@ object-fit:contain;
     transform: translateY(0);
   }
  
-} */
+}

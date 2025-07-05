@@ -44,9 +44,9 @@
   </nav>
 
 <section class="px-10">
-  <h1 class="mt-[100px] text-2xl text-gray-400 font-semibold">WOMEN</h1>
+  <h1 class="mt-[100px] text-2xl text-gray-400 font-semibold">DISCOUNT</h1>
   <article class="bg-[#FAF9F6] px-[40px] flex items-center justify-center mt-[20px]">
-      <ul id="womenList" class="bg-[#FAF9F6]  flex items-center justify-around flex-wrap space-x-10">
+      <ul id="discountList" class="bg-[#FAF9F6]  flex items-center justify-around flex-wrap space-x-10">
        
         <!-- <li class="w-[300px] h-[400px] p-[10px]">
           
@@ -201,7 +201,7 @@
   {
     id: 11,
     image: "images/female-jewellery/71YFnoc6TNL._AC_SY695_.jpg",
-    section: "Female Jewellery",
+    section: "Jewellery",
     category: "Women",
     title: "Gold Plated Necklaces",
     price: 100.99,
@@ -215,7 +215,7 @@
   {
     id: 12,
     image: "images/female-jewellery/femalejewellery2.jpg",
-    section: "Female Jewellery",
+    section: "Jewellery",
     category: "Women",
     title: "Moissanite Necklaces",
     price: 219.99,
@@ -229,7 +229,7 @@
   {
     id: 13,
     image: "images/female-jewellery/femalejewellery3.jpg",
-    section: "Female Jewellery",
+    section: "Jewellery",
     category: "Women",
     title: "old Bangle Bracelets",
     price: 29.99,
@@ -243,7 +243,7 @@
   {
     id: 14,
     image: "images/female-jewellery/femalejewellery4.jpg",
-    section: "Female Jewellery",
+    section: "Jewellery",
     category: "Women",
     title: "14K Gold Necklace",
     price: 500.99,
@@ -257,7 +257,7 @@
   {
     id: 15,
     image: "images/female-jewellery/femalejewellery5.jpg",
-    section: "Female Jewellery",
+    section: "Jewellery",
     category: "Women",
     title: "DEARMAY Bracelet",
     price: 155.99,
@@ -424,7 +424,7 @@
   {
     id: 27,
     image: "images/male-jewellery/menjewellery1.jpg",
-    section: "Male Jewellery",
+    section: "Jewellery",
     category: "Men",
     title: "Ursteel Necklace",
     price: 323.99,
@@ -439,7 +439,7 @@
    {
     id: 28,
     image: "images/male-jewellery/menjewellery2.jpg",
-    section: "Male Jewellery",
+    section: "Jewellery",
     category: "Men",
     title: "Aniu Cremation Jewelry",
     price: 79.99,
@@ -453,7 +453,7 @@
   {
     id: 29,
     image: "images/male-jewellery/menjewellery3.jpg",
-    section: "Male Jewellery",
+    section: "Jewellery",
     category: "Men",
     title: "Momlovu Gold Chain",
     price: 54.99,
@@ -467,7 +467,7 @@
   {
     id: 30,
     image: "images/male-jewellery/menjewellery4.jpg",
-    section: "Male Jewellery",
+    section: "Jewellery",
     category: "Men",
     title: "Lacoste Bracelet",
     price: 100.99,
@@ -481,7 +481,7 @@
   {
     id: 31,
     image: "images/male-jewellery/menjewellery5.jpg",
-    section: "Male Jewellery",
+    section: "Jewellery",
     category: "Men",
     title: "RANKEEF Tiger Bracelet",
     price: 180.99,
@@ -495,7 +495,7 @@
   {
     id: 32,
     image: "images/male-jewellery/menjewellery6.webp",
-    section: "Male Jewellery",
+    section: "Jewellery",
     category: "Men",
     title: "Watch Jewelry Box",
     price: 110.99,
@@ -557,17 +557,16 @@
 
 
 //For rendering all items in data
-const womenProduct = data.filter((data) => data.category === "Women")
-console.log(womenProduct)
-function displayWomenProducts(womenProduct) {
-  const listWomen = document.getElementById("womenList");
-  // listWomen.innerHTML = "";
+const discountProduct = data.filter((data) => data.price <= 39.90);
 
-  womenProduct.forEach((d) => {
-    const liWomen = document.createElement("li");
-    liWomen.className = "product";
+function displayDiscountProducts(discountProduct) {
+  const listDiscount = document.getElementById("discountList");
+  
+  discountProduct.forEach((d) => {
+    const liDiscount = document.createElement("li");
+    liDiscount.className = "product";
     
-    liWomen.innerHTML = `
+    liDiscount.innerHTML = `
     <div class="w-[270px] shadow-lg pb-4 flex flex-col items-center justify-center mb-[70px]">
       <div class="flex items-center justify-center w-[100%] h-[300px] bg-white border-[5px] border-[#ffd700] rounded-[1px]">
           <img src="${d.image}" alt="">
@@ -582,14 +581,14 @@ function displayWomenProducts(womenProduct) {
       </div>
      </div>
        `;
-    listWomen.appendChild(liWomen);
+    listDiscount.appendChild(liDiscount);
 
   
   });
 }
 
 
-window.addEventListener("DOMContentLoaded", displayWomenProducts(womenProduct));
+window.addEventListener("DOMContentLoaded", displayDiscountProducts(discountProduct));
 
   </script>
 </body>

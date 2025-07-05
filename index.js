@@ -512,9 +512,12 @@ function displayProducts(randomData) {
      </div>
        `;
     list.appendChild(li);
-
+     li.addEventListener("click", () => {
+      alert("Product page under construction");
+     })
   
   });
+ 
 }
 
 
