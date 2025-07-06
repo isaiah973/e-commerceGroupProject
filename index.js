@@ -489,7 +489,11 @@ console.log(above20)
 const randomData = [below10, above10, above20];
 
 const modal = document.getElementById("modalProduct");
-modal.style.display="none"
+modal.style.display="none";
+
+const close = document.getElementById("closeModal");
+close.style.display="none";
+
 
 function displayProducts(randomData) {
   const list = document.getElementById("productList");
@@ -524,25 +528,25 @@ function displayProducts(randomData) {
       newDiv.className = "productDiv";
 
       newDiv.innerHTML = `
-           <div class="w-[89%] h-[89%] flex">
+             <div class="w-[60%] h-[89%] flex items-center space-x-5 border-[3px] px-4">
     <div class="flex items-center justify-center w-[400px] h-[400px] bg-white border-[5px] border-[#ffd700] rounded-[1px]">
       <img class="w-full h-full object-contain" src="${d.image}" alt="">
     </div>
 
-    <div class="p-6 space-y-4 mt-5">
+    <div class=" space-y-7 w-full h-[100%] py-12 px-5">
       <span class="px-2 py-1 text-xs mb-[10px] border-[1px] border-black">BACK IN STOCK</span>
       <p class="font-semibold mt-2">${d.title}</p>
       <p class="mb-4">${d.description}</p>
-      <p>$45.99</p>
-      <p></p>
+      <p>$${d.price}</p>
+      <p>${d.shippingInformation}</p>
 
       <div class="mt-3">
         <p class="text-sm">Size: <span class="text-gray-400">Select</span></p>
         <div>
-          <button class="border-[2px] border-gray-300 w-[30px]">S</button>
-          <button class="border-[2px] border-gray-300 w-[30px]">M</button>
-          <button class="border-[2px] border-gray-300 w-[30px]">L</button>
-          <button class="border-[2px] border-gray-300 w-[60px]">XL/1X</button>
+          <button class="border-[2px] border-gray-300 w-[50px]">S</button>
+          <button class="border-[2px] border-gray-300 w-[50px]">M</button>
+          <button class="border-[2px] border-gray-300 w-[50px]">L</button>
+          <button class="border-[2px] border-gray-300 w-[80px]">XL/1X</button>
         </div>
 
       </div>
@@ -551,23 +555,33 @@ function displayProducts(randomData) {
         <button class="px-[9px] py-[10px] text-white bg-black text-[10px]">Add to Wish List</button>
       </div>
     </div>
-
-  </div>
+  </div> 
+           
       `
-      
+     
       modal.style.display="block";
       modal.appendChild(newDiv);
+      close.style.display="block";
      });
-  
+    
+   
   });
  
 
   
- 
+  close.addEventListener("click", ()=> {
+    modal.style.display="none";
+    close.style.display="none";
+    location.reload()
+  })
 }
 
 
+
+
 window.addEventListener("DOMContentLoaded", displayProducts(randomData));
+
+
 
 
 //For rendering all items in data
