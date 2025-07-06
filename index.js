@@ -556,7 +556,7 @@ function displayProducts(randomData) {
       </div>
     </div>
   </div> 
-           
+
       `
      
       modal.style.display="block";
