@@ -1,3 +1,4 @@
+
 const emailInput = document.getElementById("email-input");
 const passwordInput = document.getElementById("password-input");
 const loginButton = document.getElementById("login-btn");
@@ -18,7 +19,6 @@ const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/;
    
 // });
 //disregard thid first line of code
-const testing = 123;
 
 const data = [
   {
@@ -488,6 +488,9 @@ console.log(above20)
 
 const randomData = [below10, above10, above20];
 
+const modal = document.getElementById("modalProduct");
+modal.style.display="none"
+
 function displayProducts(randomData) {
   const list = document.getElementById("productList");
   list.innerHTML = "";
@@ -512,11 +515,54 @@ function displayProducts(randomData) {
      </div>
        `;
     list.appendChild(li);
-     li.addEventListener("click", () => {
-      alert("Product page under construction");
-     })
+     
+
+    
+    li.addEventListener("click", () => {
+      
+      const newDiv = document.createElement("div")
+      newDiv.className = "productDiv";
+
+      newDiv.innerHTML = `
+           <div class="w-[89%] h-[89%] flex">
+    <div class="flex items-center justify-center w-[400px] h-[400px] bg-white border-[5px] border-[#ffd700] rounded-[1px]">
+      <img class="w-full h-full object-contain" src="${d.image}" alt="">
+    </div>
+
+    <div class="p-6 space-y-4 mt-5">
+      <span class="px-2 py-1 text-xs mb-[10px] border-[1px] border-black">BACK IN STOCK</span>
+      <p class="font-semibold mt-2">${d.title}</p>
+      <p class="mb-4">${d.description}</p>
+      <p>$45.99</p>
+      <p></p>
+
+      <div class="mt-3">
+        <p class="text-sm">Size: <span class="text-gray-400">Select</span></p>
+        <div>
+          <button class="border-[2px] border-gray-300 w-[30px]">S</button>
+          <button class="border-[2px] border-gray-300 w-[30px]">M</button>
+          <button class="border-[2px] border-gray-300 w-[30px]">L</button>
+          <button class="border-[2px] border-gray-300 w-[60px]">XL/1X</button>
+        </div>
+
+      </div>
+      <div class="mt-2">
+        <button class="px-[9px] py-[10px] text-white bg-black text-[10px]">ADD TO CART</button>
+        <button class="px-[9px] py-[10px] text-white bg-black text-[10px]">Add to Wish List</button>
+      </div>
+    </div>
+
+  </div>
+      `
+      
+      modal.style.display="block";
+      modal.appendChild(newDiv);
+     });
   
   });
+ 
+
+  
  
 }
 
