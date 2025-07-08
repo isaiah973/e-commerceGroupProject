@@ -486,17 +486,14 @@ const above10 = data[random2];
 const random3 = Math.floor(Math.random()*10+(10+10));
 const above20 = data[random3];
 
-console.log(below10)
-console.log(above10)
-console.log(above20)
 
 const randomData = [below10, above10, above20];
 
-const modal = document.getElementById("modalProduct");
-modal.style.display="none";
+// const modal = document.getElementById("modalProduct");
+// modal.style.display="none";
 
-const close = document.getElementById("closeModal");
-close.style.display="none";
+// const close = document.getElementById("closeModal");
+// close.style.display="none";
 
 
 function displayProducts(randomData) {
@@ -562,25 +559,29 @@ function displayProducts(randomData) {
   </div> 
 
       `
+           sessionStorage.setItem("divItem", JSON.stringify(d));
+
+           window.location.href="productDetail.html";
+
      
-      modal.style.display="block";
-      modal.appendChild(newDiv);
-      close.style.display="block";
+      // modal.style.display="block";
+      // modal.appendChild(newDiv);
+      // close.style.display="block";
      });
     
+
+
    
   });
  
 
   
-  close.addEventListener("click", ()=> {
-    modal.style.display="none";
-    close.style.display="none";
-    location.reload()
-  })
+  // close.addEventListener("click", ()=> {
+  //   modal.style.display="none";
+  //   close.style.display="none";
+  //   location.reload()
+  // })
 }
-
-
 
 
 window.addEventListener("DOMContentLoaded", displayProducts(randomData));
@@ -646,9 +647,12 @@ function displayFewProducts(fewData) {
         <button class="border-[2px] border-[#36454F] text-[15px] px-3 py-1 hover:bg-[#6d898e]">ADD TO CART</button>
       </div>
      </div>
-       `;
+       `
+        
+       ;
     listFew.appendChild(liFew);
-     });
-}
+
+
+  })}
 window.addEventListener("DOMContentLoaded", displayFewProducts(fewData));
 
