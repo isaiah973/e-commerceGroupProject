@@ -36,6 +36,20 @@ const data = [
   },
 
   {
+    id: 16,
+    image: "images/men-img/71Ra5-MwliL._AC_SY879_.jpg",
+    section: "Clothing",
+    category: "Men",
+    title: "UOUA Outfits",
+    price: 42.99,
+    description: "Summer Casual Short Sleeve Button Down Shirt & Long Pants Sets Beach Vacation",
+    shippingInformation: "delivery Mon,jul 28",
+    fabricType: "95% Polyester",
+    careInstructions: "Machine Wash",
+    origin: "Imported",
+  },
+
+  {
     id: 2,
     image: "images/female-img/female2.s50.jpg",
     section: "Clothing",
@@ -59,6 +73,48 @@ const data = [
     description: "Short Sleeve V-Neck Dress Shift Dress Summer Dresses for Women 2025",
     shippingInformation: "delivery Mon,jul 28",
     fabricType: "100% Polyester",
+    careInstructions: "Machine Wash",
+    origin: "Imported",
+  },
+
+  {
+    id: 25,
+    image: "images/men-img/men9.jpg",
+    section: "Clothing",
+    category: "Men",
+    title: "COOFANDY Cotton Sets",
+    price: 49.99,
+    description: "Casual Long Sleeve Cuban Henley Shirt and Loose Pants Set Beach Vacation Outfits",
+    shippingInformation: "delivery Mon,jul 28",
+    fabricType: "typeHIGH QUALITY FABRIC - 95% Polyester, 5% Spandex.Soft, Breathable and Stretchy Waffle textured fabric.",
+    careInstructions: "Machine Wash",
+    origin: "Imported",
+  },
+
+  {
+    id: 26,
+    image: "images/men-img/men10.jpg",
+    section: "Clothing",
+    category: "Men",
+    title: "COOFANDY Cotton Sets",
+    price: 49.99,
+    description: "Casual Long Sleeve Cuban Henley Shirt and Loose Pants Set Beach Vacation Outfits",
+    shippingInformation: "delivery Mon,jul 28",
+    fabricType: "49%rayon 36%polyester 15%nylon",
+    careInstructions: "Machine Wash",
+    origin: "Imported",
+  },
+
+  {
+    id: 27,
+    image: "images/male-jewellery/menjewellery1.jpg",
+    section: "Male Jewellery",
+    category: "Men",
+    title: "Ursteel Necklace",
+    price: 323,
+    description: "for Men - 18K Gold Silver Black Cross Necklaces Chain for Men, Layered Rope Chain Necklace Mens Jewelry 16 18 20 22 24 Inch",
+    shippingInformation: "delivery Mon,jul 28",
+    fabricType: "Steel",
     careInstructions: "Machine Wash",
     origin: "Imported",
   },
@@ -245,19 +301,7 @@ const data = [
     origin: "Imported",
   },
 
-  {
-    id: 16,
-    image: "images/men-img/71Ra5-MwliL._AC_SY879_.jpg",
-    section: "Clothing",
-    category: "Men",
-    title: "UOUA Outfits",
-    price: 42.99,
-    description: "Summer Casual Short Sleeve Button Down Shirt & Long Pants Sets Beach Vacation",
-    shippingInformation: "delivery Mon,jul 28",
-    fabricType: "95% Polyester",
-    careInstructions: "Machine Wash",
-    origin: "Imported",
-  },
+  
   {
     id: 17,
     image: "images/men-img/men2.jpg",
@@ -356,47 +400,7 @@ const data = [
     origin: "Imported",
   },
   
-  {
-    id: 25,
-    image: "images/men-img/men9.jpg",
-    section: "Clothing",
-    category: "Men",
-    title: "COOFANDY Cotton Sets",
-    price: 49.99,
-    description: "Casual Long Sleeve Cuban Henley Shirt and Loose Pants Set Beach Vacation Outfits",
-    shippingInformation: "delivery Mon,jul 28",
-    fabricType: "typeHIGH QUALITY FABRIC - 95% Polyester, 5% Spandex.Soft, Breathable and Stretchy Waffle textured fabric.",
-    careInstructions: "Machine Wash",
-    origin: "Imported",
-  },
-
-  {
-    id: 26,
-    image: "images/men-img/men10.jpg",
-    section: "Clothing",
-    category: "Men",
-    title: "COOFANDY Cotton Sets",
-    price: 49.99,
-    description: "Casual Long Sleeve Cuban Henley Shirt and Loose Pants Set Beach Vacation Outfits",
-    shippingInformation: "delivery Mon,jul 28",
-    fabricType: "49%rayon 36%polyester 15%nylon",
-    careInstructions: "Machine Wash",
-    origin: "Imported",
-  },
-
-  {
-    id: 27,
-    image: "images/male-jewellery/menjewellery1.jpg",
-    section: "Male Jewellery",
-    category: "Men",
-    title: "Ursteel Necklace",
-    price: 323,
-    description: "for Men - 18K Gold Silver Black Cross Necklaces Chain for Men, Layered Rope Chain Necklace Mens Jewelry 16 18 20 22 24 Inch",
-    shippingInformation: "delivery Mon,jul 28",
-    fabricType: "Steel",
-    careInstructions: "Machine Wash",
-    origin: "Imported",
-  },
+  
   
 
    {
@@ -528,31 +532,31 @@ function displayProducts(randomData) {
       newDiv.className = "productDiv";
 
       newDiv.innerHTML = `
-             <div class="w-[60%] h-[89%] flex items-center space-x-5 border-[3px] px-4">
+             <div class="shadow-lg w-[60%] h-[89%] flex items-center space-x-5 border-[3px] px-4">
     <div class="flex items-center justify-center w-[400px] h-[400px] bg-white border-[5px] border-[#ffd700] rounded-[1px]">
       <img class="w-full h-full object-contain" src="${d.image}" alt="">
     </div>
 
     <div class=" space-y-7 w-full h-[100%] py-12 px-5">
       <span class="px-2 py-1 text-xs mb-[10px] border-[1px] border-black">BACK IN STOCK</span>
-      <p class="font-semibold mt-2">${d.title}</p>
-      <p class="mb-4">${d.description}</p>
-      <p>$${d.price}</p>
-      <p>${d.shippingInformation}</p>
+      <p class="font-semibold mt-2 bg-gray-100 py-2"><strong>Title: </strong>${d.title}</p>
+      <p class="mb-4"><strong>Description:</strong> ${d.description}</p>
+      <p class="font-bold">$${d.price}</p>
+      <p class="italic">${d.shippingInformation}</p>
 
       <div class="mt-3">
         <p class="text-sm">Size: <span class="text-gray-400">Select</span></p>
         <div>
-          <button class="border-[2px] border-gray-300 w-[50px]">S</button>
-          <button class="border-[2px] border-gray-300 w-[50px]">M</button>
-          <button class="border-[2px] border-gray-300 w-[50px]">L</button>
-          <button class="border-[2px] border-gray-300 w-[80px]">XL/1X</button>
+          <button class="border-[2px] border-gray-300 w-[50px] hover:bg-gray-200 hover: text-black">S</button>
+          <button class="border-[2px] border-gray-300 w-[50px] hover:bg-gray-200 hover: text-black">M</button>
+          <button class="border-[2px] border-gray-300 w-[50px] hover:bg-gray-200 hover: text-black">L</button>
+          <button class="border-[2px] border-gray-300 w-[80px] hover:bg-gray-200 hover: text-black">XL/1X</button>
         </div>
 
       </div>
       <div class="mt-2">
-        <button class="px-[9px] py-[10px] text-white bg-black text-[10px]">ADD TO CART</button>
-        <button class="px-[9px] py-[10px] text-white bg-black text-[10px]">Add to Wish List</button>
+        <button class="px-[9px] py-[10px] text-white bg-black text-[10px] hover:bg-white hover:text-black hover:border-[1px] hover:border-black">ADD TO CART</button>
+        <button class="px-[9px] py-[10px] text-white bg-black text-[10px] hover:bg-white hover:text-black hover:border-[1px] hover:border-black">Add to Wish List</button>
       </div>
     </div>
   </div> 
@@ -617,3 +621,34 @@ window.addEventListener("DOMContentLoaded", displayProducts(randomData));
 
 
 // window.addEventListener("DOMContentLoaded", displayProducts(data));
+
+const fewData = data.splice(0, 8);
+console.log(fewData);
+function displayFewProducts(fewData) {
+  const listFew = document.getElementById("fewList");
+ 
+
+  fewData.forEach((d) => {
+    const liFew = document.createElement("li");
+    liFew.className = "product";
+    
+    liFew.innerHTML = `
+    <div class="w-[270px] shadow-lg pb-4 flex flex-col items-center justify-center mb-[70px]">
+      <div class="flex items-center justify-center w-[100%] h-[300px] bg-white border-[5px] border-[#ffd700] rounded-[1px]">
+          <img src="${d.image}" alt="">
+      </div>
+
+      <p class="px-5 text-[18px] text-[#36454F] font-bold mt-7 text-center">${d.title}</p>
+
+      <p class="text-center mt-4 text-2xl font-extralight">$${d.price}</p>
+
+      <div class="flex items-center justify-center mt-5">
+        <button class="border-[2px] border-[#36454F] text-[15px] px-3 py-1 hover:bg-[#6d898e]">ADD TO CART</button>
+      </div>
+     </div>
+       `;
+    listFew.appendChild(liFew);
+     });
+}
+window.addEventListener("DOMContentLoaded", displayFewProducts(fewData));
+
