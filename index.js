@@ -489,11 +489,6 @@ const above20 = data[random3];
 
 const randomData = [below10, above10, above20];
 
-// const modal = document.getElementById("modalProduct");
-// modal.style.display="none";
-
-// const close = document.getElementById("closeModal");
-// close.style.display="none";
       
 
 function displayProducts(randomData) {
@@ -522,9 +517,9 @@ function displayProducts(randomData) {
      </div>
        `;
     list.appendChild(li);
-      // START HERE 
-     
     
+     
+    //click on item card for product detail page
     li.addEventListener("click", () => {
      
       
@@ -564,7 +559,7 @@ function displayProducts(randomData) {
       `
       
         
-
+          //storing the item in sessionStorage
            sessionStorage.setItem("divItem", JSON.stringify(d));
 
            window.location.href="productDetail.html";
@@ -573,7 +568,7 @@ function displayProducts(randomData) {
     
   });
   ////////////ADD TO CART NOT WORKING
-  const addCart = document.getElementById("add");
+  const addCart = document.getElementById("add");// ID OF ADD TO CART BUTTON
     
      addCart.addEventListener("click", (event) => {
        event.preventDefault();
