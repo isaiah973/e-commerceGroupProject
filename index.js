@@ -568,7 +568,7 @@ function displayProducts(randomData) {
     
   });
   ////////////ADD TO CART NOT WORKING
-  const addCart = document.getElementById("add");// ID OF ADD TO CART BUTTON
+  const addCart = document.getElementById("add");// ID OF ADD TO CART GENEARTED BUTTON FOR POPULAR PICKS ARRAY
     
      addCart.addEventListener("click", (event) => {
        event.preventDefault();
