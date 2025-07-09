@@ -494,11 +494,13 @@ const randomData = [below10, above10, above20];
 
 // const close = document.getElementById("closeModal");
 // close.style.display="none";
-
+      
 
 function displayProducts(randomData) {
   const list = document.getElementById("productList");
   list.innerHTML = "";
+
+  
 
   randomData.forEach((d) => {
     const li = document.createElement("li");
@@ -515,15 +517,16 @@ function displayProducts(randomData) {
       <p class="text-center mt-4 text-2xl font-extralight">$${d.price}</p>
 
       <div class="flex items-center justify-center mt-5">
-        <button class="border-[2px] border-[#82878a] text-[15px] px-3 py-1 hover:bg-[#6d898e]">ADD TO CART</button>
+      <button id="add" class="border-[2px] border-[#82878a] text-[15px] px-3 py-1 hover:bg-[#6d898e]">ADD TO CART</button>
       </div>
      </div>
        `;
     list.appendChild(li);
+      // START HERE 
      
-
     
     li.addEventListener("click", () => {
+     
       
       const newDiv = document.createElement("div")
       newDiv.className = "productDiv";
@@ -559,28 +562,29 @@ function displayProducts(randomData) {
   </div> 
 
       `
+      
+        
+
            sessionStorage.setItem("divItem", JSON.stringify(d));
 
            window.location.href="productDetail.html";
 
-     
-      // modal.style.display="block";
-      // modal.appendChild(newDiv);
-      // close.style.display="block";
      });
     
-
-
-   
   });
- 
-
+  ////////////
+  const addCart = document.getElementById("add");
+    
+     addCart.addEventListener("click", (event) => {
+       event.preventDefault();
+       event.stopPropagation()
+        alert("working")
+      
+        
+     })
   
-  // close.addEventListener("click", ()=> {
-  //   modal.style.display="none";
-  //   close.style.display="none";
-  //   location.reload()
-  // })
+
+
 }
 
 
@@ -588,43 +592,8 @@ window.addEventListener("DOMContentLoaded", displayProducts(randomData));
 
 
 
-
-//For rendering all items in data
-
-// function displayProducts(data) {
-//   const list = document.getElementById("productList");
-//   list.innerHTML = "";
-
-//   data.forEach((d) => {
-//     const li = document.createElement("li");
-//     li.className = "product";
-    
-//     li.innerHTML = `
-//     <div class="w-[270px] shadow-lg pb-4 flex flex-col items-center justify-center mb-[70px]">
-//       <div class="flex items-center justify-center w-[100%] h-[300px] bg-white border-[5px] border-[#36454F] rounded-[1px]">
-//           <img src="${d.image}" alt="">
-//       </div>
-
-//       <p class="px-5 text-[18px] text-[#36454F] font-bold mt-7 text-center">${d.title}</p>
-
-//       <p class="text-center mt-4 text-2xl font-extralight">$${d.price}</p>
-
-//       <div class="flex items-center justify-center mt-5">
-//         <button class="border-[2px] border-[#36454F] text-[15px] px-3 py-1 hover:bg-[#6d898e]">ADD TO CART</button>
-//       </div>
-//      </div>
-//        `;
-//     list.appendChild(li);
-
-  
-//   });
-// }
-
-
-// window.addEventListener("DOMContentLoaded", displayProducts(data));
-
+//additional items to explore
 const fewData = data.splice(0, 8);
-console.log(fewData);
 function displayFewProducts(fewData) {
   const listFew = document.getElementById("fewList");
  
