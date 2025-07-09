@@ -572,7 +572,7 @@ function displayProducts(randomData) {
      });
     
   });
-  ////////////
+  ////////////ADD TO CART NOT WORKING
   const addCart = document.getElementById("add");
     
      addCart.addEventListener("click", (event) => {
