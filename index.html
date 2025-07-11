@@ -11,7 +11,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/cart-localstorage/dist/cart-localstorage.min.js"></script>
   <link rel="stylesheet" href="style.css">
   <title>Pagatts</title>
 </head>
@@ -33,7 +35,11 @@
      <div class="">
        <div class="flex gap-5 items-center justify-center">
         <a class="" href="login.html"><img class="w-[22px]" src="images/icons8-user-32.png" alt=""></a>
-        <a href="cart.html"><img class="w-[20px]" src="images/shopping-cart.png" alt=""></a>
+       <a href="myCart.html" class="relative">
+  <img class="w-[20px]" src="images/shopping-cart.png" alt="Cart">
+  <span id="cartCount" class="absolute -top-2 -right-2 bg-black text-white text-[10px] w-[18px] h-[18px] rounded-full flex items-center justify-center font-bold">0</span>
+</a>
+
         <a href="contact.html"><img class="w-[20px]" src="images/icons8-contact-50 (1).png" alt=""></a>
         
       </div>
@@ -145,5 +151,16 @@
 
 
   <script src="index.js"></script>
+  <script>
+  function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cartCountEl = document.getElementById("cartCount");
+    const totalCount = cart.reduce((acc, item) => acc + (item.quantity || 1), 0);
+    cartCountEl.textContent = totalCount;
+  }
+
+  updateCartCount();
+</script>
+
 </body>
 </html>

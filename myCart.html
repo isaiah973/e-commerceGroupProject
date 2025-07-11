@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Cart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 min-h-screen">
+    <div class="max-w-5xl mx-auto p-6 text-center">
+      <h1 class="text-3xl font-bold mb-6">Your Shopping Cart</h1>
+
+      <div id="cartItems" class="space-y-1 flex flex-col justify-center"></div>
+
+      <div
+        id="info"
+        class="mt-10 flex justify-between items-center border-t pt-6"
+      >
+        <p class="text-xl font-semibold">
+          Total: <span id="totalPrice" class="text-black">$0.00</span>
+        </p>
+        <a href="checkoutpage.html">
+          <button
+            class="bg-black text-white px-6 py-3 rounded hover:bg-white hover:text-black border hover:border-black transition"
+          >
+            Checkout
+          </button>
+        </a>
+      </div>
+    </div>
+
+    <script>
+      const cartItemsContainer = document.getElementById("cartItems");
+      const totalPriceElement = document.getElementById("totalPrice");
+      const info = document.getElementById("info");
+
+      function renderCart() {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cartItemsContainer.innerHTML = "";
+
+        let total = 0;
+
+        if (cart.length === 0) {
+          cartItemsContainer.innerHTML =
+            '<p class="text-gray-600 text-lg h-[100vh] m-auto"><img src="images/empty-cart.png"/>Your cart is empty.</p>';
+          totalPriceElement.textContent = "$0.00";
+          info.innerHTML = "";
+          return;
+        }
+
+        cart.forEach((item, index) => {
+          const itemTotal = item.price * item.quantity;
+          total += itemTotal;
+
+          const cartItem = document.createElement("div");
+          cartItem.className =
+            "bg-white p-4 shadow rounded flex items-center space-x-6";
+
+          cartItem.innerHTML = `
+            <img src="${item.image}" class="w-28 h-28 object-contain border rounded" />
+            <div class="flex-1">
+              <h2 class="text-xl font-semibold mb-1">${item.title}</h2>
+              <p class="text-sm text-gray-500 mb-1">${item.description}</p>
+              <p class="text-black font-bold mb-2">$${item.price} x ${item.quantity}</p>
+              <div class="flex items-center space-x-3">
+                <button data-index="${index}" class="decrease bg-black text-white px-3 py-1 text-xs rounded">-</button>
+                <span>${item.quantity}</span>
+                <button data-index="${index}" class="increase bg-black text-white px-3 py-1 text-xs rounded">+</button>
+                <button data-index="${index}" class="remove text-red-500 text-xs hover:underline">Remove</button>
+              </div>
+            </div>
+          `;
+
+          cartItemsContainer.appendChild(cartItem);
+        });
+
+        totalPriceElement.textContent = `$${total.toFixed(2)}`;
+        attachListeners();
+      }
+
+      function attachListeners() {
+        document.querySelectorAll(".increase").forEach((button) => {
+          button.addEventListener("click", (e) => {
+            const index = e.target.dataset.index;
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            cart[index].quantity += 1;
+            localStorage.setItem("cart", JSON.stringify(cart));
+            renderCart();
+          });
+        });
+
+        document.querySelectorAll(".decrease").forEach((button) => {
+          button.addEventListener("click", (e) => {
+            const index = e.target.dataset.index;
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            if (cart[index].quantity > 1) {
+              cart[index].quantity -= 1;
+              localStorage.setItem("cart", JSON.stringify(cart));
+              renderCart();
+            }
+          });
+        });
+
+        document.querySelectorAll(".remove").forEach((button) => {
+          button.addEventListener("click", (e) => {
+            const index = e.target.dataset.index;
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            cart.splice(index, 1);
+            localStorage.setItem("cart", JSON.stringify(cart));
+            renderCart();
+          });
+        });
+      }
+
+      renderCart();
+    </script>
+  </body>
+</html>

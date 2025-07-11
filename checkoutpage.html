@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Checkout</title>
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <div class="max-w-4xl mx-auto mt-10 p-4 bg-white shadow-lg rounded-md">
+      <h2 class="text-2xl font-bold mb-6">Checkout</h2>
+
+      <div id="cartItems" class="space-y-4"></div>
+
+      <div class="flex justify-between mt-6">
+        <p class="text-xl font-semibold">Total:</p>
+        <p id="cartTotal" class="text-xl font-bold">$0.00</p>
+      </div>
+
+      <button
+        id="payBtn"
+        class="mt-6 w-full bg-black text-white py-3 text-sm rounded-md hover:bg-gray-800 transition"
+      >
+        Pay with Paystack
+      </button>
+    </div>
+
+    <!-- Paystack SDK -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+
+    <script>
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      const cartItemsContainer = document.getElementById("cartItems");
+      const cartTotalEl = document.getElementById("cartTotal");
+
+      let total = 0;
+
+      if (cart.length === 0) {
+        cartItemsContainer.innerHTML = "<p>Your cart is empty.</p>";
+      } else {
+        cart.forEach((item) => {
+          const itemHTML = `
+          <div class="flex items-center justify-between border-b pb-3">
+            <div class="flex items-center space-x-4">
+              <img src="${item.image}" alt="${item.title}" class="w-16 h-16 object-cover rounded"/>
+              <div>
+                <p class="font-medium">${item.title}</p>
+                <p class="text-gray-600">$${item.price}</p>
+              </div>
+            </div>
+            <p class="text-black font-bold">$${item.price}</p>
+          </div>
+        `;
+          cartItemsContainer.insertAdjacentHTML("beforeend", itemHTML);
+          total += item.price * item.quantity;
+        });
+        cartTotalEl.textContent = `$${total.toFixed(2)}`;
+      }
+
+      // Handle Paystack Payment
+      document.getElementById("payBtn").addEventListener("click", function () {
+        let handler = PaystackPop.setup({
+          key: "pk_test_064d1ab7c7420892a19045c5b4caf8d26ed5c5ab", // Replace with your public key
+          email: "customer@example.com", // Optionally, replace with dynamic customer email
+          amount: Math.round(total * 100),
+          currency: "NGN",
+          ref: "" + Math.floor(Math.random() * 1000000000 + 1),
+          metadata: {
+            custom_fields: [
+              {
+                display_name: "Cart Items",
+                variable_name: "cart_items",
+                value: cart.map((item) => item.title).join(", "),
+              },
+            ],
+          },
+          callback: function (response) {
+            alert("Payment successful! Reference: " + response.reference);
+            localStorage.removeItem("cart");
+            window.location.href = "/thank-you.html"; // create this page
+          },
+          onClose: function () {
+            alert("Payment window closed.");
+          },
+        });
+        handler.openIframe();
+      });
+    </script>
+  </body>
+</html>

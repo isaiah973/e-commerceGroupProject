@@ -1,11 +1,8 @@
-
 const emailInput = document.getElementById("email-input");
 const passwordInput = document.getElementById("password-input");
 const loginButton = document.getElementById("login-btn");
 const createButton = document.getElementById("create-btn");
 const errorMessageEmail = document.getElementById("emailErrMsg");
-
-
 
 const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/;
 
@@ -16,7 +13,7 @@ const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/;
 //     if(validateEmail === false) {
 //       errorMessageEmail.innerHTML = "Enter a valid email";
 //     };
-   
+
 // });
 //disregard thid first line of code
 
@@ -28,7 +25,8 @@ const data = [
     category: "Women",
     title: "Wkior Shift Dress",
     price: 48.99,
-    description: "For Women V Neck Short Sleeves Solid Color Casual Flowy Summer Dresses(S-2XL)",
+    description:
+      "For Women V Neck Short Sleeves Solid Color Casual Flowy Summer Dresses(S-2XL)",
     shippingInformation: "delivery Mon,jul 28",
     fabricType: "100% Polyester",
     careInstructions: "Machine Wash",
@@ -42,7 +40,8 @@ const data = [
     category: "Men",
     title: "UOUA Outfits",
     price: 42.99,
-    description: "Summer Casual Short Sleeve Button Down Shirt & Long Pants Sets Beach Vacation",
+    description:
+      "Summer Casual Short Sleeve Button Down Shirt & Long Pants Sets Beach Vacation",
     shippingInformation: "delivery Mon,jul 28",
     fabricType: "95% Polyester",
     careInstructions: "Machine Wash",
@@ -56,7 +55,8 @@ const data = [
     category: "Women",
     title: "QACOHU Dresses",
     price: 45.99,
-    description: "V Neck Spring Summer Ruffle Long Sleeve Simple Casual Loose Flowy Autumn Winter Shift Dress",
+    description:
+      "V Neck Spring Summer Ruffle Long Sleeve Simple Casual Loose Flowy Autumn Winter Shift Dress",
     shippingInformation: "delivery Mon,jul 28",
     fabricType: "100% Polyester",
     careInstructions: "Machine Wash",
@@ -70,7 +70,8 @@ const data = [
     section: "Clothing",
     title: "JOCAFIYE Casual Dress",
     price: 70.99,
-    description: "Short Sleeve V-Neck Dress Shift Dress Summer Dresses for Women 2025",
+    description:
+      "Short Sleeve V-Neck Dress Shift Dress Summer Dresses for Women 2025",
     shippingInformation: "delivery Mon,jul 28",
     fabricType: "100% Polyester",
     careInstructions: "Machine Wash",
@@ -84,9 +85,11 @@ const data = [
     category: "Men",
     title: "COOFANDY Cotton Sets",
     price: 49.99,
-    description: "Casual Long Sleeve Cuban Henley Shirt and Loose Pants Set Beach Vacation Outfits",
+    description:
+      "Casual Long Sleeve Cuban Henley Shirt and Loose Pants Set Beach Vacation Outfits",
     shippingInformation: "delivery Mon,jul 28",
-    fabricType: "typeHIGH QUALITY FABRIC - 95% Polyester, 5% Spandex.Soft, Breathable and Stretchy Waffle textured fabric.",
+    fabricType:
+      "typeHIGH QUALITY FABRIC - 95% Polyester, 5% Spandex.Soft, Breathable and Stretchy Waffle textured fabric.",
     careInstructions: "Machine Wash",
     origin: "Imported",
   },
@@ -98,7 +101,8 @@ const data = [
     category: "Men",
     title: "COOFANDY Cotton Sets",
     price: 49.99,
-    description: "Casual Long Sleeve Cuban Henley Shirt and Loose Pants Set Beach Vacation Outfits",
+    description:
+      "Casual Long Sleeve Cuban Henley Shirt and Loose Pants Set Beach Vacation Outfits",
     shippingInformation: "delivery Mon,jul 28",
     fabricType: "49%rayon 36%polyester 15%nylon",
     careInstructions: "Machine Wash",
@@ -112,7 +116,8 @@ const data = [
     category: "Men",
     title: "Ursteel Necklace",
     price: 323,
-    description: "for Men - 18K Gold Silver Black Cross Necklaces Chain for Men, Layered Rope Chain Necklace Mens Jewelry 16 18 20 22 24 Inch",
+    description:
+      "for Men - 18K Gold Silver Black Cross Necklaces Chain for Men, Layered Rope Chain Necklace Mens Jewelry 16 18 20 22 24 Inch",
     shippingInformation: "delivery Mon,jul 28",
     fabricType: "Steel",
     careInstructions: "Machine Wash",
@@ -140,21 +145,23 @@ const data = [
     section: "Clothing",
     title: "Nmoder Casual Dress",
     price: 60.99,
-    description: "Semi Formal Fit and Flare 3/4 Sleeve A-line Church Work Dress with Pockets",
+    description:
+      "Semi Formal Fit and Flare 3/4 Sleeve A-line Church Work Dress with Pockets",
     shippingInformation: "delivery Mon,jul 28",
     fabricType: "Polyester&Elastane",
     careInstructions: "Machine Wash",
     origin: "Imported",
   },
 
-   {
+  {
     id: 6,
     image: "images/female-img/female6.jpg",
     section: "Clothing",
     category: "Women",
     title: "HOTOUCH Dress",
     price: 33.99,
-    description: "2025 Short Sleeve A-Line Mini Dress Casual Crew Neck Shift Dress Beach",
+    description:
+      "2025 Short Sleeve A-Line Mini Dress Casual Crew Neck Shift Dress Beach",
     shippingInformation: "delivery Mon,jul 28",
     fabricType: "Polyester&Elastane",
     careInstructions: "Machine Wash",
@@ -168,7 +175,8 @@ const data = [
     category: "Women",
     title: "Zeagoo Summer Dress",
     price: 30.99,
-    description: "Midi Tiered Casual Dress Floral V Neck Ruffle Short Sleeve Flowy Beach Dress with Pockets",
+    description:
+      "Midi Tiered Casual Dress Floral V Neck Ruffle Short Sleeve Flowy Beach Dress with Pockets",
     shippingInformation: "delivery Mon,jul 28",
     fabricType: "95% Polyester, 5% Spandex",
     careInstructions: "Machine Wash",
@@ -182,7 +190,8 @@ const data = [
     category: "Women",
     title: "LOMON Length Sleeve",
     price: 29.99,
-    description: "2025 Short Sleeve A-Line Mini Dress Casual Crew Neck Shift Dress Beach",
+    description:
+      "2025 Short Sleeve A-Line Mini Dress Casual Crew Neck Shift Dress Beach",
     shippingInformation: "delivery Mon,jul 28",
     fabricType: "95% Polyester, 5% Spandex",
     careInstructions: "Machine Wash",
@@ -196,7 +205,8 @@ const data = [
     category: "Women",
     title: "Zeagoo Midi Dres",
     price: 41.99,
-    description: "2025 Short Sleeve A-Line Mini Dress Casual Crew Neck Shift Dress Beach",
+    description:
+      "2025 Short Sleeve A-Line Mini Dress Casual Crew Neck Shift Dress Beach",
     shippingInformation: "delivery Mon,jul 28",
     fabricType: "Polyester&Elastane",
     careInstructions: "Machine Wash",
@@ -210,7 +220,8 @@ const data = [
     category: "Women",
     title: "Short Sleeve V-Neck",
     price: 60.99,
-    description: "2025 Short Sleeve A-Line Mini Dress Casual Crew Neck Shift Dress Beach",
+    description:
+      "2025 Short Sleeve A-Line Mini Dress Casual Crew Neck Shift Dress Beach",
     shippingInformation: "delivery Mon,Aug 28",
     fabricType: "Polyester&Elastane",
     careInstructions: "Machine Wash",
@@ -224,7 +235,8 @@ const data = [
     category: "Women",
     title: "Gold Plated Necklaces",
     price: 100,
-    description: "Anniversary for Gifts for Women, 18k Gold Plated Sunflower Necklaces for Women, Anniversary Her Gifts",
+    description:
+      "Anniversary for Gifts for Women, 18k Gold Plated Sunflower Necklaces for Women, Anniversary Her Gifts",
     shippingInformation: "delivery Mon,Sep 18",
     fabricType: "Sterling Silver",
     careInstructions: "nill",
@@ -238,7 +250,8 @@ const data = [
     category: "Women",
     title: "Moissanite Necklaces",
     price: 219,
-    description: "For Women 0.5Ct-7.6Ct Jewelry for Wife Her Mom Daughter Girlfriend Birthday",
+    description:
+      "For Women 0.5Ct-7.6Ct Jewelry for Wife Her Mom Daughter Girlfriend Birthday",
     shippingInformation: "delivery Jul 09",
     fabricType: "Necklace",
     careInstructions: "Machine Wash",
@@ -252,7 +265,8 @@ const data = [
     category: "Women",
     title: "old Bangle Bracelets",
     price: 29.99,
-    description: "For Women Teens Trendy Chunky Adjustable Twist Cuff Bracelet Jewelry Gifts",
+    description:
+      "For Women Teens Trendy Chunky Adjustable Twist Cuff Bracelet Jewelry Gifts",
     shippingInformation: "delivery Mon,jul 28",
     fabricType: "Yellow Gold",
     careInstructions: "Machine Wash",
@@ -280,7 +294,8 @@ const data = [
     category: "Women",
     title: "DEARMAY Bracelet",
     price: 155,
-    description: "14K Real Gold Jewelry Sets Trendy Thin Dainty Stackable Cuban Link",
+    description:
+      "14K Real Gold Jewelry Sets Trendy Thin Dainty Stackable Cuban Link",
     shippingInformation: "delivery Mon,jul 28",
     fabricType: "Metal",
     careInstructions: "Machine Wash",
@@ -301,7 +316,6 @@ const data = [
     origin: "Imported",
   },
 
-  
   {
     id: 17,
     image: "images/men-img/men2.jpg",
@@ -309,7 +323,8 @@ const data = [
     category: "Men",
     title: "FZNHQL Tracksuits",
     price: 23.99,
-    description: "2 Piece Casual Athletic Jogging Outfits Short/Long Sleeve Track Suits",
+    description:
+      "2 Piece Casual Athletic Jogging Outfits Short/Long Sleeve Track Suits",
     shippingInformation: "delivery Mon,jul 28",
     fabricType: "Polyester&Elastane",
     careInstructions: "Machine Wash",
@@ -337,7 +352,8 @@ const data = [
     category: "Men",
     title: "COOFANDY Cotton Sets",
     price: 49.99,
-    description: "Casual Long Sleeve Cuban Henley Shirt and Loose Pants Set Beach",
+    description:
+      "Casual Long Sleeve Cuban Henley Shirt and Loose Pants Set Beach",
     shippingInformation: "delivery Mon,jul 28",
     fabricType: "49%rayon 36%polyester 15%nylon",
     careInstructions: "Machine Wash",
@@ -351,7 +367,8 @@ const data = [
     category: "Men",
     title: "COOFANDY Long Sleeve ",
     price: 49.99,
-    description: "Button Down Cuban Shirt and Pants Set Summer Beach Set Outfits",
+    description:
+      "Button Down Cuban Shirt and Pants Set Summer Beach Set Outfits",
     shippingInformation: "delivery Mon,jul 28",
     fabricType: "49%rayon 36%polyester 15%nylon",
     careInstructions: "Machine Wash",
@@ -379,7 +396,8 @@ const data = [
     category: "Men",
     title: "UOUA Summer Suit",
     price: 56.99,
-    description: "2 Piece Shorts Sets Short Sleeve Sweatsuit Outfits 1/4 Zip Golf Polo Shirts Loungewear",
+    description:
+      "2 Piece Shorts Sets Short Sleeve Sweatsuit Outfits 1/4 Zip Golf Polo Shirts Loungewear",
     shippingInformation: "delivery Mon,jul 28",
     fabricType: "97% Polyester, 3% Elastane",
     careInstructions: "Machine Wash",
@@ -393,24 +411,24 @@ const data = [
     category: "Men",
     title: "Babioboa Tracksuit",
     price: 31.99,
-    description: "Summer T Shirt & Shorts set 2 Pockets Oversize Two Piece Casual Daily Duty-off",
+    description:
+      "Summer T Shirt & Shorts set 2 Pockets Oversize Two Piece Casual Daily Duty-off",
     shippingInformation: "delivery Mon,jul 28",
-    fabricType: "typeHIGH QUALITY FABRIC - 95% Polyester, 5% Spandex.Soft, Breathable and Stretchy Waffle textured fabric.",
+    fabricType:
+      "typeHIGH QUALITY FABRIC - 95% Polyester, 5% Spandex.Soft, Breathable and Stretchy Waffle textured fabric.",
     careInstructions: "Machine Wash",
     origin: "Imported",
   },
-  
-  
-  
 
-   {
+  {
     id: 28,
     image: "images/male-jewellery/menjewellery2.jpg",
     section: "Male Jewellery",
     category: "Men",
     title: "Aniu Cremation Jewelry",
     price: 79.99,
-    description: "Ashes S925 Sterling Silver Urn Necklace Memorial Necklace for Human Ashes of Loved",
+    description:
+      "Ashes S925 Sterling Silver Urn Necklace Memorial Necklace for Human Ashes of Loved",
     shippingInformation: "delivery Mon,jul 28",
     fabricType: "Steel",
     careInstructions: "Machine Wash",
@@ -424,7 +442,8 @@ const data = [
     category: "Men",
     title: "Momlovu Gold Chain",
     price: 54.99,
-    description: "4mm/6mm Non-Tarnish 18K Gold-Plated Cuban Link Chain, Cool Men's Necklace Chain",
+    description:
+      "4mm/6mm Non-Tarnish 18K Gold-Plated Cuban Link Chain, Cool Men's Necklace Chain",
     shippingInformation: "delivery Mon,jul 28",
     fabricType: "Steel",
     careInstructions: "",
@@ -452,7 +471,8 @@ const data = [
     category: "Men",
     title: "RANKEEF Tiger Bracelet",
     price: 180,
-    description: "8MM Natural Stone Stretch Adjustable Black Crystal Beaded Bracelet",
+    description:
+      "8MM Natural Stone Stretch Adjustable Black Crystal Beaded Bracelet",
     shippingInformation: "delivery Mon,jul 28",
     fabricType: "Steel",
     careInstructions: "",
@@ -466,45 +486,39 @@ const data = [
     category: "Men",
     title: "Watch Jewelry Box",
     price: 110,
-    description: "6-Slot 2-Layer Watch Case and Sunglasses Storage with Large Glass Lid, Men's Jewelry Box",
+    description:
+      "6-Slot 2-Layer Watch Case and Sunglasses Storage with Large Glass Lid, Men's Jewelry Box",
     shippingInformation: "delivery Mon,jul 28",
     fabricType: "Steel",
     careInstructions: "",
     origin: "Imported",
   },
-]
-
- 
+];
 
 //Generate Random items(3) for Popular Picks
-const random1 = Math.floor(Math.random()*10);
-const below10 = data[random1]
+// const random1 = Math.floor(Math.random() * 10);
+// const below10 = data[random1];
 
-const random2 = Math.floor(Math.random()*10+10);
-const above10 = data[random2];
+// const random2 = Math.floor(Math.random() * 10 + 10);
+// const above10 = data[random2];
 
-const random3 = Math.floor(Math.random()*10+(10+10));
-const above20 = data[random3];
+// const random3 = Math.floor(Math.random() * 10 + (10 + 10));
+// const above20 = data[random3];
 
-
-const randomData = [below10, above10, above20];
-
-      
-
-function displayProducts(randomData) {
+// const randomData = [below10, above10, above20];
+const popular = data.splice(0, 3);
+function displayProducts(popular) {
   const list = document.getElementById("productList");
   list.innerHTML = "";
 
-  
-
-  randomData.forEach((d) => {
+  popular.forEach((d) => {
     const li = document.createElement("li");
     li.className = "product";
-    
+
     li.innerHTML = `
     <div class="w-[270px] shadow-lg pb-4 flex flex-col items-center justify-center mb-[70px]">
       <div class="flex items-center justify-center w-[100%] h-[300px] bg-white border-[5px] border-[#ffd700] rounded-[1px]">
-          <img src="${d.image}" alt="">
+          <img id="${d.image}" src="${d.image}" alt="">
       </div>
 
       <p class="px-5 text-[18px] text-[#36454F] font-bold mt-7 text-center">${d.title}</p>
@@ -512,18 +526,39 @@ function displayProducts(randomData) {
       <p class="text-center mt-4 text-2xl font-extralight">$${d.price}</p>
 
       <div class="flex items-center justify-center mt-5">
-      <button id="add" class="border-[2px] border-[#82878a] text-[15px] px-3 py-1 hover:bg-[#6d898e]">ADD TO CART</button>
+      <button id="${d.id}" class="border-[2px] border-[#82878a] text-[15px] px-3 py-1 hover:bg-[#6d898e]">ADD TO CART</button>
       </div>
      </div>
        `;
     list.appendChild(li);
-    
+
+      const addCart1 = document.getElementById(`${d.id}`);
+      if(addCart1) {
+        addCart1.addEventListener("click", (event) => {
+            event.stopPropagation();
+            event.preventDefault();
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            const existingItem = cart.find((item) => item.id === d.id);
+            if (existingItem) {
+              existingItem.quantity += 1;
+            } else {
+              cart.push({ ...d, quantity: 1 });
+            }
+
+            localStorage.setItem("cart", JSON.stringify(cart));
+            alert(`${d.title} added to cart!`);
+          });
      
+      }
+
     //click on item card for product detail page
-    li.addEventListener("click", () => {
-     
-      
-      const newDiv = document.createElement("div")
+     const clickImage1 = document.getElementById(`${d.image}`);
+         if(clickImage1) {
+          clickImage1.addEventListener("click", (event) => {
+             event.stopPropagation();
+            event.preventDefault();
+            const newDiv = document.createElement("div");
       newDiv.className = "productDiv";
 
       newDiv.innerHTML = `
@@ -556,34 +591,21 @@ function displayProducts(randomData) {
     </div>
   </div> 
 
-      `
-      
-        
-          //storing the item in sessionStorage
-           sessionStorage.setItem("divItem", JSON.stringify(d));
+      `;
 
-           window.location.href="productDetail.html";
+      //storing the item in sessionStorage
+      sessionStorage.setItem("divItem", JSON.stringify(d));
 
-     });
-    
+      window.location.href = "productDetail.html";
+          })
+         }
   });
-  ////////////ADD TO CART NOT WORKING
-  const addCart = document.getElementById("add");// ID OF ADD TO CART GENEARTED BUTTON FOR POPULAR PICKS ARRAY
-    
-     addCart.addEventListener("click", (event) => {
-       event.preventDefault();
-       event.stopPropagation()
-        alert("working")
-      
-        
-     })
-  
-
-
+ 
 }
 
+window.addEventListener("DOMContentLoaded", displayProducts(popular));
 
-window.addEventListener("DOMContentLoaded", displayProducts(randomData));
+
 
 
 
@@ -591,15 +613,14 @@ window.addEventListener("DOMContentLoaded", displayProducts(randomData));
 const fewData = data.splice(0, 8);
 function displayFewProducts(fewData) {
   const listFew = document.getElementById("fewList");
- 
 
   fewData.forEach((d) => {
     const liFew = document.createElement("li");
     liFew.className = "product";
-    
+
     liFew.innerHTML = `
     <div class="w-[270px] shadow-lg pb-4 flex flex-col items-center justify-center mb-[70px]">
-      <div class="flex items-center justify-center w-[100%] h-[300px] bg-white border-[5px] border-[#ffd700] rounded-[1px]">
+      <div id="${d.image}" class="flex items-center justify-center w-[100%] h-[300px] bg-white border-[5px] border-[#ffd700] rounded-[1px]">
           <img src="${d.image}" alt="">
       </div>
 
@@ -608,15 +629,82 @@ function displayFewProducts(fewData) {
       <p class="text-center mt-4 text-2xl font-extralight">$${d.price}</p>
 
       <div class="flex items-center justify-center mt-5">
-        <button class="border-[2px] border-[#36454F] text-[15px] px-3 py-1 hover:bg-[#6d898e]">ADD TO CART</button>
+        <button id="${d.id}" class="border-[2px] border-[#36454F] text-[15px] px-3 py-1 hover:bg-[#6d898e]">ADD TO CART</button>
       </div>
      </div>
-       `
-        
-       ;
+       `;
+
     listFew.appendChild(liFew);
 
 
-  })}
-window.addEventListener("DOMContentLoaded", displayFewProducts(fewData));
+    const addCart = document.getElementById(`${d.id}`);
+      if(addCart) {
+        addCart.addEventListener("click", (event) => {
+           event.stopPropagation();
+            event.preventDefault();
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
+            const existingItem = cart.find((item) => item.id === d.id);
+            if (existingItem) {
+              existingItem.quantity += 1;
+            } else {
+              cart.push({ ...d, quantity: 1 });
+            }
+
+            localStorage.setItem("cart", JSON.stringify(cart));
+            alert(`${d.title} added to cart!`);
+          });
+      
+      }
+          const clickImage = document.getElementById(`${d.image}`);
+         if(clickImage) {
+          clickImage.addEventListener("click", (event) => {
+             event.stopPropagation();
+            event.preventDefault();
+            const newDiv = document.createElement("div");
+      newDiv.className = "productDiv";
+
+      newDiv.innerHTML = `
+             <div class="shadow-lg w-[60%] h-[89%] flex items-center space-x-5 border-[3px] px-4">
+    <div class="flex items-center justify-center w-[400px] h-[400px] bg-white border-[5px] border-[#ffd700] rounded-[1px]">
+      <img class="w-full h-full object-contain" src="${d.image}" alt="">
+    </div>
+
+    <div class=" space-y-7 w-full h-[100%] py-12 px-5">
+      <span class="px-2 py-1 text-xs mb-[10px] border-[1px] border-black">BACK IN STOCK</span>
+      <p class="font-semibold mt-2 bg-gray-100 py-2"><strong>Title: </strong>${d.title}</p>
+      <p class="mb-4"><strong>Description:</strong> ${d.description}</p>
+      <p class="font-bold">$${d.price}</p>
+      <p class="italic">${d.shippingInformation}</p>
+
+      <div class="mt-3">
+        <p class="text-sm">Size: <span class="text-gray-400">Select</span></p>
+        <div>
+          <button class="border-[2px] border-gray-300 w-[50px] hover:bg-gray-200 hover: text-black">S</button>
+          <button class="border-[2px] border-gray-300 w-[50px] hover:bg-gray-200 hover: text-black">M</button>
+          <button class="border-[2px] border-gray-300 w-[50px] hover:bg-gray-200 hover: text-black">L</button>
+          <button class="border-[2px] border-gray-300 w-[80px] hover:bg-gray-200 hover: text-black">XL/1X</button>
+        </div>
+
+      </div>
+      <div class="mt-2">
+        <button class="px-[9px] py-[10px] text-white bg-black text-[10px] hover:bg-white hover:text-black hover:border-[1px] hover:border-black">ADD TO CART</button>
+        <button class="px-[9px] py-[10px] text-white bg-black text-[10px] hover:bg-white hover:text-black hover:border-[1px] hover:border-black">Add to Wish List</button>
+      </div>
+    </div>
+  </div> 
+
+      `;
+
+      //storing the item in sessionStorage
+      sessionStorage.setItem("divItem", JSON.stringify(d));
+
+      window.location.href = "productDetail.html";
+          })
+         }
+
+  });
+  
+}
+
+window.addEventListener("DOMContentLoaded", displayFewProducts(fewData));
