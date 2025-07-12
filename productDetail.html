@@ -15,7 +15,7 @@
   </head>
   <body>
     <nav
-      class="flex gap-[230px] bg-whitesmoke h-[7vh] px-[100px] justify-center font-medium items-center"
+      class="flex gap-[230px] bg-whitesmoke h-[7vh] px-[100px] justify-center font-medium items-center shadow-lg"
     >
       <div
         class="flex space-x-10 items-center justify-center text-[#4b4a44] text-[16px]"
@@ -83,10 +83,14 @@
         </div>
       </div>
     </nav>
-    <div
+
+
+   <div class="flex items-center justify-center h-[85vh] w-[100%] mt-5">
+     <div
       id="modalProduct"
-      class="border-[2px] fixed inset-0 w-[100%] z-[1000] h-[100vh] bg-white flex items-center justify-center shadow-lg m-[h-auto]"
+      class="border-[2px] inset-0 w-[70%] z-[1000] h-[85vh] bg-white flex items-center justify-center shadow-lg m-[h-auto]"
     ></div>
+   </div>
     <script>
       const modal = document.getElementById("modalProduct");
 
@@ -105,7 +109,7 @@
           <span class="px-2 py-1 text-xs mb-[10px] border-[1px] border-black">BACK IN STOCK</span>
           <p class="font-semibold mt-2 bg-gray-100 py-2"><strong>Title: </strong>${divItem.title}</p>
           <p class="mb-4"><strong>Description:</strong> ${divItem.description}</p>
-          <p class="font-bold">$${divItem.price}</p>
+          <p class="font-bold">&#8358;${divItem.price}</p>
           <p class="italic">${divItem.shippingInformation}</p>
 
           <div class="mt-3">

@@ -22,7 +22,7 @@
         class="mt-10 flex justify-between items-center border-t pt-6"
       >
         <p class="text-xl font-semibold">
-          Total: <span id="totalPrice" class="text-black">$0.00</span>
+          Total: <span id="totalPrice" class="text-black">&#8358;0.00</span>
         </p>
         <a href="checkoutpage.html">
           <button
@@ -48,7 +48,7 @@
         if (cart.length === 0) {
           cartItemsContainer.innerHTML =
             '<p class="text-gray-600 text-lg h-[100vh] m-auto"><img src="images/empty-cart.png"/>Your cart is empty.</p>';
-          totalPriceElement.textContent = "$0.00";
+          totalPriceElement.textContent = "&#8358;0.00";
           info.innerHTML = "";
           return;
         }
@@ -66,7 +66,7 @@
             <div class="flex-1">
               <h2 class="text-xl font-semibold mb-1">${item.title}</h2>
               <p class="text-sm text-gray-500 mb-1">${item.description}</p>
-              <p class="text-black font-bold mb-2">$${item.price} x ${item.quantity}</p>
+              <p class="text-black font-bold mb-2">&#8358;${item.price} x ${item.quantity}</p>
               <div class="flex items-center space-x-3">
                 <button data-index="${index}" class="decrease bg-black text-white px-3 py-1 text-xs rounded">-</button>
                 <span>${item.quantity}</span>

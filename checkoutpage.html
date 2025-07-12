@@ -45,16 +45,16 @@
               <img src="${item.image}" alt="${item.title}" class="w-16 h-16 object-cover rounded"/>
               <div>
                 <p class="font-medium">${item.title}</p>
-                <p class="text-gray-600">$${item.price}</p>
+                <p class="text-gray-600">&#8358;${item.price}</p>
               </div>
             </div>
-            <p class="text-black font-bold">$${item.price}</p>
+            <p class="text-black font-bold">&#8358;${item.price}</p>
           </div>
         `;
           cartItemsContainer.insertAdjacentHTML("beforeend", itemHTML);
           total += item.price * item.quantity;
         });
-        cartTotalEl.textContent = `$${total.toFixed(2)}`;
+        cartTotalEl.textContent = `&#8358;${total.toFixed(2)}`;
       }
 
       // Handle Paystack Payment

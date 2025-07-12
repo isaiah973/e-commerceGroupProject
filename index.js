@@ -24,7 +24,7 @@ const data = [
     section: "Clothing",
     category: "Women",
     title: "Wkior Shift Dress",
-    price: 48.99,
+    price: 4899,
     description:
       "For Women V Neck Short Sleeves Solid Color Casual Flowy Summer Dresses(S-2XL)",
     shippingInformation: "delivery Mon,jul 28",
@@ -39,7 +39,7 @@ const data = [
     section: "Clothing",
     category: "Men",
     title: "UOUA Outfits",
-    price: 42.99,
+    price: 4299,
     description:
       "Summer Casual Short Sleeve Button Down Shirt & Long Pants Sets Beach Vacation",
     shippingInformation: "delivery Mon,jul 28",
@@ -54,7 +54,7 @@ const data = [
     section: "Clothing",
     category: "Women",
     title: "QACOHU Dresses",
-    price: 45.99,
+    price: 4599,
     description:
       "V Neck Spring Summer Ruffle Long Sleeve Simple Casual Loose Flowy Autumn Winter Shift Dress",
     shippingInformation: "delivery Mon,jul 28",
@@ -69,7 +69,7 @@ const data = [
     category: "Women",
     section: "Clothing",
     title: "JOCAFIYE Casual Dress",
-    price: 70.99,
+    price: 7099,
     description:
       "Short Sleeve V-Neck Dress Shift Dress Summer Dresses for Women 2025",
     shippingInformation: "delivery Mon,jul 28",
@@ -84,7 +84,7 @@ const data = [
     section: "Clothing",
     category: "Men",
     title: "COOFANDY Cotton Sets",
-    price: 49.99,
+    price: 4999,
     description:
       "Casual Long Sleeve Cuban Henley Shirt and Loose Pants Set Beach Vacation Outfits",
     shippingInformation: "delivery Mon,jul 28",
@@ -100,7 +100,7 @@ const data = [
     section: "Clothing",
     category: "Men",
     title: "COOFANDY Cotton Sets",
-    price: 49.99,
+    price: 4999,
     description:
       "Casual Long Sleeve Cuban Henley Shirt and Loose Pants Set Beach Vacation Outfits",
     shippingInformation: "delivery Mon,jul 28",
@@ -115,7 +115,7 @@ const data = [
     section: "Male Jewellery",
     category: "Men",
     title: "Ursteel Necklace",
-    price: 323,
+    price: 32300,
     description:
       "for Men - 18K Gold Silver Black Cross Necklaces Chain for Men, Layered Rope Chain Necklace Mens Jewelry 16 18 20 22 24 Inch",
     shippingInformation: "delivery Mon,jul 28",
@@ -130,7 +130,7 @@ const data = [
     category: "Women",
     section: "Clothing",
     title: "QACOHU Summer Dress",
-    price: 48.99,
+    price: 4899,
     description: "V Neck Ruffle Short Sleeve Casual Shift Dress",
     shippingInformation: "delivery Mon,jul 28",
     fabricType: "100% Polyester",
@@ -144,7 +144,7 @@ const data = [
     category: "Women",
     section: "Clothing",
     title: "Nmoder Casual Dress",
-    price: 60.99,
+    price: 6099,
     description:
       "Semi Formal Fit and Flare 3/4 Sleeve A-line Church Work Dress with Pockets",
     shippingInformation: "delivery Mon,jul 28",
@@ -159,7 +159,7 @@ const data = [
     section: "Clothing",
     category: "Women",
     title: "HOTOUCH Dress",
-    price: 33.99,
+    price: 3399,
     description:
       "2025 Short Sleeve A-Line Mini Dress Casual Crew Neck Shift Dress Beach",
     shippingInformation: "delivery Mon,jul 28",
@@ -174,7 +174,7 @@ const data = [
     section: "Clothing",
     category: "Women",
     title: "Zeagoo Summer Dress",
-    price: 30.99,
+    price: 3099,
     description:
       "Midi Tiered Casual Dress Floral V Neck Ruffle Short Sleeve Flowy Beach Dress with Pockets",
     shippingInformation: "delivery Mon,jul 28",
@@ -189,7 +189,7 @@ const data = [
     section: "Clothing",
     category: "Women",
     title: "LOMON Length Sleeve",
-    price: 29.99,
+    price: 2999,
     description:
       "2025 Short Sleeve A-Line Mini Dress Casual Crew Neck Shift Dress Beach",
     shippingInformation: "delivery Mon,jul 28",
@@ -204,7 +204,7 @@ const data = [
     section: "Clothing",
     category: "Women",
     title: "Zeagoo Midi Dres",
-    price: 41.99,
+    price: 4199,
     description:
       "2025 Short Sleeve A-Line Mini Dress Casual Crew Neck Shift Dress Beach",
     shippingInformation: "delivery Mon,jul 28",
@@ -219,7 +219,7 @@ const data = [
     section: "Clothing",
     category: "Women",
     title: "Short Sleeve V-Neck",
-    price: 60.99,
+    price: 6099,
     description:
       "2025 Short Sleeve A-Line Mini Dress Casual Crew Neck Shift Dress Beach",
     shippingInformation: "delivery Mon,Aug 28",
@@ -234,7 +234,7 @@ const data = [
     section: "Female Jewellery",
     category: "Women",
     title: "Gold Plated Necklaces",
-    price: 100,
+    price: 10000,
     description:
       "Anniversary for Gifts for Women, 18k Gold Plated Sunflower Necklaces for Women, Anniversary Her Gifts",
     shippingInformation: "delivery Mon,Sep 18",
@@ -249,7 +249,7 @@ const data = [
     section: "Female Jewellery",
     category: "Women",
     title: "Moissanite Necklaces",
-    price: 219,
+    price: 21900,
     description:
       "For Women 0.5Ct-7.6Ct Jewelry for Wife Her Mom Daughter Girlfriend Birthday",
     shippingInformation: "delivery Jul 09",
@@ -264,7 +264,7 @@ const data = [
     section: "Female Jewellery",
     category: "Women",
     title: "old Bangle Bracelets",
-    price: 29.99,
+    price: 2999,
     description:
       "For Women Teens Trendy Chunky Adjustable Twist Cuff Bracelet Jewelry Gifts",
     shippingInformation: "delivery Mon,jul 28",
@@ -279,7 +279,7 @@ const data = [
     section: "Female Jewellery",
     category: "Women",
     title: "14K Gold Necklace",
-    price: 500.99,
+    price: 50099,
     description: "Dainty Gold Name Necklace Personalized Initial",
     shippingInformation: "delivery Mon,jul 28",
     fabricType: "Gold Plated",
@@ -293,7 +293,7 @@ const data = [
     section: "Female Jewellery",
     category: "Women",
     title: "DEARMAY Bracelet",
-    price: 155,
+    price: 15500,
     description:
       "14K Real Gold Jewelry Sets Trendy Thin Dainty Stackable Cuban Link",
     shippingInformation: "delivery Mon,jul 28",
@@ -308,7 +308,7 @@ const data = [
     section: "Clothing",
     category: "Women",
     title: "Swarovski Crystal",
-    price: 99,
+    price: 9900,
     description: "Swarovski Luna Crystal Jewelry Collection",
     shippingInformation: "delivery Mon,jul 28",
     fabricType: "Metal",
@@ -322,7 +322,7 @@ const data = [
     section: "Clothing",
     category: "Men",
     title: "FZNHQL Tracksuits",
-    price: 23.99,
+    price: 2399,
     description:
       "2 Piece Casual Athletic Jogging Outfits Short/Long Sleeve Track Suits",
     shippingInformation: "delivery Mon,jul 28",
@@ -337,7 +337,7 @@ const data = [
     section: "Clothing",
     category: "Men",
     title: "COOFANDY Linen Outfit",
-    price: 20.99,
+    price: 2099,
     description: "Beach Button Down Shirt Casual Loose Pant Sets",
     shippingInformation: "delivery Mon,jul 28",
     fabricType: "Polyester&Elastane",
@@ -351,7 +351,7 @@ const data = [
     section: "Clothing",
     category: "Men",
     title: "COOFANDY Cotton Sets",
-    price: 49.99,
+    price: 4999,
     description:
       "Casual Long Sleeve Cuban Henley Shirt and Loose Pants Set Beach",
     shippingInformation: "delivery Mon,jul 28",
@@ -366,7 +366,7 @@ const data = [
     section: "Clothing",
     category: "Men",
     title: "COOFANDY Long Sleeve ",
-    price: 49.99,
+    price: 4999,
     description:
       "Button Down Cuban Shirt and Pants Set Summer Beach Set Outfits",
     shippingInformation: "delivery Mon,jul 28",
@@ -381,7 +381,7 @@ const data = [
     section: "Clothing",
     category: "Men",
     title: "COOFANDY Linen Outfit",
-    price: 56.99,
+    price: 5699,
     description: "Beach Button Down Shirt Casual Loose Pant Sets",
     shippingInformation: "delivery Mon,jul 28",
     fabricType: "49%rayon 36%polyester 15%nylon",
@@ -395,7 +395,7 @@ const data = [
     section: "Clothing",
     category: "Men",
     title: "UOUA Summer Suit",
-    price: 56.99,
+    price: 5699,
     description:
       "2 Piece Shorts Sets Short Sleeve Sweatsuit Outfits 1/4 Zip Golf Polo Shirts Loungewear",
     shippingInformation: "delivery Mon,jul 28",
@@ -410,7 +410,7 @@ const data = [
     section: "Clothing",
     category: "Men",
     title: "Babioboa Tracksuit",
-    price: 31.99,
+    price: 3199,
     description:
       "Summer T Shirt & Shorts set 2 Pockets Oversize Two Piece Casual Daily Duty-off",
     shippingInformation: "delivery Mon,jul 28",
@@ -426,7 +426,7 @@ const data = [
     section: "Male Jewellery",
     category: "Men",
     title: "Aniu Cremation Jewelry",
-    price: 79.99,
+    price: 7999,
     description:
       "Ashes S925 Sterling Silver Urn Necklace Memorial Necklace for Human Ashes of Loved",
     shippingInformation: "delivery Mon,jul 28",
@@ -441,7 +441,7 @@ const data = [
     section: "Male Jewellery",
     category: "Men",
     title: "Momlovu Gold Chain",
-    price: 54.99,
+    price: 5499,
     description:
       "4mm/6mm Non-Tarnish 18K Gold-Plated Cuban Link Chain, Cool Men's Necklace Chain",
     shippingInformation: "delivery Mon,jul 28",
@@ -456,7 +456,7 @@ const data = [
     section: "Male Jewellery",
     category: "Men",
     title: "Lacoste Bracelet",
-    price: 100,
+    price: 10000,
     description: "Lacoste Metropole Men's Bracelets",
     shippingInformation: "delivery Mon,jul 28",
     fabricType: "Steel",
@@ -470,7 +470,7 @@ const data = [
     section: "Male Jewellery",
     category: "Men",
     title: "RANKEEF Tiger Bracelet",
-    price: 180,
+    price: 18000,
     description:
       "8MM Natural Stone Stretch Adjustable Black Crystal Beaded Bracelet",
     shippingInformation: "delivery Mon,jul 28",
@@ -485,7 +485,7 @@ const data = [
     section: "Male Jewellery",
     category: "Men",
     title: "Watch Jewelry Box",
-    price: 110,
+    price: 11000,
     description:
       "6-Slot 2-Layer Watch Case and Sunglasses Storage with Large Glass Lid, Men's Jewelry Box",
     shippingInformation: "delivery Mon,jul 28",
@@ -494,6 +494,16 @@ const data = [
     origin: "Imported",
   },
 ];
+const loginBox = document.getElementById("loginPromptBox");
+
+const loginBtn = document.getElementById("loginIcon");
+
+
+  loginBtn.addEventListener("click", () => {
+    loginBox.style.display = "flex";
+  })
+
+
 
 //Generate Random items(3) for Popular Picks
 // const random1 = Math.floor(Math.random() * 10);
@@ -517,22 +527,24 @@ function displayProducts(popular) {
 
     li.innerHTML = `
     <div class="w-[270px] shadow-lg pb-4 flex flex-col items-center justify-center mb-[70px]">
+    
       <div class="flex items-center justify-center w-[100%] h-[300px] bg-white border-[5px] border-[#ffd700] rounded-[1px]">
           <img id="${d.image}" src="${d.image}" alt="">
       </div>
 
       <p class="px-5 text-[18px] text-[#36454F] font-bold mt-7 text-center">${d.title}</p>
 
-      <p class="text-center mt-4 text-2xl font-extralight">$${d.price}</p>
+      <p class="text-center mt-4 text-2xl font-extralight">&#8358;${d.price}</p>
 
       <div class="flex items-center justify-center mt-5">
-      <button id="${d.id}" class="border-[2px] border-[#82878a] text-[15px] px-3 py-1 hover:bg-[#6d898e]">ADD TO CART</button>
+      <button id="${d.id}" class="border-[2px] border-[#82878a] text-[15px] px-3 py-1 hover:bg-black hover:text-white hover:border-white">ADD TO CART</button>
       </div>
      </div>
        `;
     list.appendChild(li);
 
       const addCart1 = document.getElementById(`${d.id}`);
+      
       if(addCart1) {
         addCart1.addEventListener("click", (event) => {
             event.stopPropagation();
@@ -548,6 +560,7 @@ function displayProducts(popular) {
 
             localStorage.setItem("cart", JSON.stringify(cart));
             alert(`${d.title} added to cart!`);
+         
           });
      
       }
@@ -571,7 +584,7 @@ function displayProducts(popular) {
       <span class="px-2 py-1 text-xs mb-[10px] border-[1px] border-black">BACK IN STOCK</span>
       <p class="font-semibold mt-2 bg-gray-100 py-2"><strong>Title: </strong>${d.title}</p>
       <p class="mb-4"><strong>Description:</strong> ${d.description}</p>
-      <p class="font-bold">$${d.price}</p>
+      <p class="font-bold">&#8358;${d.price}</p>
       <p class="italic">${d.shippingInformation}</p>
 
       <div class="mt-3">
@@ -626,7 +639,7 @@ function displayFewProducts(fewData) {
 
       <p class="px-5 text-[18px] text-[#36454F] font-bold mt-7 text-center">${d.title}</p>
 
-      <p class="text-center mt-4 text-2xl font-extralight">$${d.price}</p>
+      <p class="text-center mt-4 text-2xl font-extralight">&#8358;${d.price}</p>
 
       <div class="flex items-center justify-center mt-5">
         <button id="${d.id}" class="border-[2px] border-[#36454F] text-[15px] px-3 py-1 hover:bg-[#6d898e]">ADD TO CART</button>
@@ -674,7 +687,7 @@ function displayFewProducts(fewData) {
       <span class="px-2 py-1 text-xs mb-[10px] border-[1px] border-black">BACK IN STOCK</span>
       <p class="font-semibold mt-2 bg-gray-100 py-2"><strong>Title: </strong>${d.title}</p>
       <p class="mb-4"><strong>Description:</strong> ${d.description}</p>
-      <p class="font-bold">$${d.price}</p>
+      <p class="font-bold">&#8358;${d.price}</p>
       <p class="italic">${d.shippingInformation}</p>
 
       <div class="mt-3">

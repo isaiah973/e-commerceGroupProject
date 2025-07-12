@@ -25,7 +25,17 @@ scroll-behavior: smooth;
   justify-content:center;
 }
 
-
+/* 
+#cartPop {
+ animation: slideup3 1s forwards;
+scroll-behavior: smooth;
+display: none;
+       
+}
+ @keyframes slideup3 {
+  from{ height: 0px;;}
+  to{height: 20px;}
+} */
 
 /* 
  #heroImage {
@@ -161,4 +171,8 @@ object-fit:contain;
 .footer-bottom a {
   color: #1da1f2;
   text-decoration: none;
+}
+
+#loginPromptBox {
+  display: none;
 }
