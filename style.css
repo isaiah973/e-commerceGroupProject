@@ -176,3 +176,6 @@ object-fit:contain;
 #loginPromptBox {
   display: none;
 }
+.toggle {
+  display: block;
+}

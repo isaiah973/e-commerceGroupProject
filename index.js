@@ -669,7 +669,8 @@ function displayFewProducts(fewData) {
           });
       
       }
-          const clickImage = document.getElementById(`${d.image}`);
+      
+      const clickImage = document.getElementById(`${d.image}`);
          if(clickImage) {
           clickImage.addEventListener("click", (event) => {
              event.stopPropagation();
