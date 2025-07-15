@@ -14,75 +14,62 @@
     <title>Document</title>
   </head>
   <body>
-    <nav
-      class="flex gap-[230px] bg-whitesmoke h-[7vh] px-[100px] justify-center font-medium items-center shadow-lg"
-    >
-      <div
-        class="flex space-x-10 items-center justify-center text-[#4b4a44] text-[16px]"
-      >
-        <a
-          class="hover:border-b-4 hover:border-b-[#ffd700] font-semibold"
-          href="women.html"
-          ><p>Women</p></a
-        >
-        <a
-          class="hover:border-b-4 hover:border-b-[#ffd700] font-semibold"
-          href="men.html"
-          ><p>Men</p></a
-        >
-        <a
-          class="hover:border-b-4 hover:border-b-[#ffd700] font-semibold"
-          href="jewellery.html"
-          ><p>Jewellery</p></a
-        >
-      </div>
+     <!-- NAVBAR------------------------- -->
+  <nav class="relative sticky top-0 z-[10000] bg-white md:gap-[100px] md:w-full  flex lg:gap-[200px] bg-whitesmoke h-[7vh] lg:px-2.5 px-2 justify-center font-medium items-center shadow-lg">
+    <!-- burger menu -->
+     <img onclick="toggle()" id="burger" class=" absolute left-5 w-[30px] lg:hidden md:hidden" src="images/burger-bar.png" alt="">
+     <!--  -->
+   
+    <div class="hidden lg:flex md:flex md:space-x-5 flex lg:space-x-10 items-center justify-center text-[#4b4a44] text-[16px]">
+      <a class="hover:border-b-4 hover:border-b-[#ffd700] font-semibold" href="women.html"><p>Women</p></a>
+      <a class="hover:border-b-4 hover:border-b-[#ffd700] font-semibold" href="men.html"><p>Men</p></a>
+      <a class="hover:border-b-4 hover:border-b-[#ffd700] font-semibold" href="jewellery.html"><p>Jewellery</p></a>
 
-      <a href="index.html"
-        ><div class="flex flex-col">
-          <p class="text-center m-auto font-bold text-2xl">PAGATTS</p>
-          <div
-            id="pagatts-slide"
-            class="animate-ping bg-[#ffd700] h-[4px] w-[107px]"
-          ></div>
-        </div>
-      </a>
-      <div class="flex space-x-3 items-center">
-        <div class="flex">
-          <input
-            placeholder="Search"
-            type="text"
-            class="text-gray-400 border-[1px] border-gray-300 outline-none mr-[5px] pl-2 placeholder:text-sm"
-          /><button
-            class="border-[1px] border-gray-300 ml-[-5px] pl-[1px] flex items-center justify-cente"
-          >
-            <img class="w-[18px]" src="images/search (1).png" alt="" />
-          </button>
-        </div>
-        <div class="">
-          <div class="flex gap-5 items-center justify-center">
-            <a class="" href="login.html"
-              ><img class="w-[22px]" src="images/icons8-user-32.png" alt=""
-            /></a>
-            <a href="myCart.html" class="relative">
-              <img class="w-[20px]" src="images/shopping-cart.png" alt="Cart" />
-              <span
-                id="cartCount"
-                class="absolute -top-2 -right-2 bg-black text-white text-[10px] w-[18px] h-[18px] rounded-full flex items-center justify-center font-bold"
-                >0</span
-              >
-            </a>
+    </div>
 
-            <a href="contact.html"
-              ><img
-                class="w-[20px]"
-                src="images/icons8-contact-50 (1).png"
-                alt=""
-            /></a>
-          </div>
-          <div class="bg-[#ffd700] h-[4px] w-[107px] mt-[1px]"></div>
-        </div>
+    <a href="index.html"><div class="flex flex-col"><p class="text-center m-auto font-bold text-2xl lg:mr-2 mr-[50px]">PAGATTS</p>
+    <div id="pagatts-slide" class="animate-ping bg-[#ffd700] h-[4px] w-[107px]"></div></div>
+    </a>
+    <div class=" flex space-x-3 lg:items-center items-end lg:justify-center justify-between">
+      <div class="flex mr-[-80px] lg:mr-0 md:mr-0 md:ml-0 lg:ml-0 ml-[100px]"><input placeholder="Search" type="text" class="text-gray-400 border-[1px] md:w-20 lg:w-[200px] w-[100px] border-gray-300 outline-none mr-[5px] pl-2 placeholder:text-sm"><button class="border-[1px] border-gray-300 ml-[-5px] pl-[1px] flex items-center justify-cente"><img class="w-[18px] " src="images/search (1).png" alt=""></button></div>
+     <div class="">
+       <div class="hidden lg:flex md:flex flex gap-5 items-center justify-center">
+         <img id="loginIcon" href="" class="w-[22px]" src="images/icons8-user-32.png" alt="">
+         <!--MYCART AND UPDATE CART COUNT-->
+       <a href="myCart.html" class="relative">
+          <img class="w-[20px]" src="images/shopping-cart.png" alt="Cart">
+          <span id="cartCount" class="absolute -top-2 -right-2 bg-black text-white text-[10px] w-[18px] h-[18px] rounded-full flex items-center justify-center font-bold">0</span>
+       </a>
+
+        <a href="contact.html"><img class="w-[20px]" src="images/icons8-contact-50 (1).png" alt=""></a>
+        
       </div>
-    </nav>
+      <div class="bg-[#ffd700] h-[4px] w-[107px] mt-[1px] hidden lg:flex md:flex"></div>
+     </div>
+    </div>
+  </nav>
+
+
+
+     <aside id="sidebar" class=" z-[3500] fixed h-[93vh] w-[100%]">
+      <div class="  h-[100vh] w-[100%] bg-white">
+         <ul class="py-5 flex flex-col">
+
+            <a href="women.html"><li class="cursor-pointer py-2 pl-4 flex items-baseline bg-white relative hover:bg-gray-300"><img class="w-6" src="images/woman.png" alt=""><p class="absolute left-[55px] top-[12px]">Women</p></li></a>
+
+           <a href="men.html"> <li class="cursor-pointer py-2 pl-4 flex items-baseline bg-white relative hover:bg-gray-300"><img class="w-6" src="images/man.png" alt=""><p class="absolute left-[55px] top-[12px]">Men</p></li></a>
+
+           <a href="jewellery.html"> <li class="cursor-pointer py-2 pl-4 flex items-baseline bg-white relative hover:bg-gray-300"><img class="w-6" src="images/diamond.png" alt=""><p class="absolute left-[55px] top-[12px]">Jewellery</p></li></a>
+
+          <a href="">  <li class="cursor-pointer py-2 pl-4 flex items-baseline bg-white relative hover:bg-gray-300"><img class="w-6" src="images/user.png" alt=""><p class="absolute left-[55px] top-[12px]">Login</p></li></a>
+
+           <a href="myCart.html"> <li class="cursor-pointer py-2 pl-4 flex items-baseline bg-white relative hover:bg-gray-300"><img class="w-6" src="images/shopping-cart.png" alt=""><p class="absolute left-[55px] top-[12px]">Cart</p></li></a>
+
+           <a href="contact.html"> <li class="cursor-pointer py-2 pl-4 flex items-baseline bg-white relative hover:bg-gray-300"><img class="w-6" src="images/icons8-contact-50 (1).png" alt=""><p class="absolute left-[55px] top-[12px]">Contact</p></li></a>
+
+          </ul>
+      </div>
+    </aside>
 
 
    <div class="flex items-center justify-center h-[85vh] w-[100%] mt-5">
@@ -92,6 +79,17 @@
     ></div>
    </div>
     <script>
+      const sidebar = document.getElementById("sidebar");
+   sidebar.style.display="none";
+  function toggle() {
+   
+  if (sidebar.style.display === "none") {
+    sidebar.style.display = "block";
+  } else {
+    sidebar.style.display = "none";
+  }
+}
+
       const modal = document.getElementById("modalProduct");
 
       let diList = sessionStorage.getItem("divItem");
