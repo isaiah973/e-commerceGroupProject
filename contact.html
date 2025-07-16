@@ -132,6 +132,16 @@
   </div>
 
   <script>
+    function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cartCountEl = document.getElementById("cartCount");
+    const totalCount = cart.reduce((acc, item) => acc + (item.quantity || 1), 0);
+    cartCountEl.textContent = totalCount;
+  }
+
+  updateCartCount();
+
+
     const sidebar = document.getElementById("sidebar");
    sidebar.style.display="none";
   function toggle() {

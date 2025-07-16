@@ -1,18 +1,25 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vendor Profile</title>
-    <link rel="stylesheet" href="vendor.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/cart-localstorage/dist/cart-localstorage.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Pagatts</title>
 </head>
-<body class="bg-gray-50 font-sans min-h-screen flex flex-col">
-     <!-- NAVBAR------------------------- -->
+<body>
+  
+
+ <!-- NAVBAR------------------------- -->
   <nav class="relative sticky top-0 z-[10000] bg-white md:gap-[100px] md:w-full  flex lg:gap-[200px] bg-whitesmoke h-[7vh] lg:px-2.5 px-2 justify-center font-medium items-center shadow-lg">
     <!-- burger menu -->
      <img onclick="toggle()" id="burger" class=" absolute left-5 w-[30px] lg:hidden md:hidden" src="images/burger-bar.png" alt="">
@@ -47,39 +54,49 @@
     </div>
   </nav>
 
-    <main class="flex-1 flex items-center justify-center px-2 py-8">
-        <div class="w-full max-w-3xl bg-white rounded-xl shadow-lg p-6 md:p-10 flex flex-col md:flex-row gap-8">
-            <!-- Profile Image -->
-            <div class="flex justify-center md:justify-start items-center">
-                <img src="images/vendor-avatar.png" alt="Vendor image" class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-[#ffd700] shadow">
-            </div>
-            <!-- Profile Details -->
-            <div class="flex-1">
-                <h1 class="text-2xl md:text-3xl font-bold text-black mb-2">Adeola Isaiah</h1>
-                <p class="text-black mb-6 text-sm md:text-base">Steph Clothing</p>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-                    <div>
-                        <span class="font-semibold text-gray-700 block">Email:</span>
-                        <span id="vendorEmail" class="text-gray-900 break-all">adeolaisaiah01@gmail.com</span>
-                    </div>
-                    <div>
-                        <span class="font-semibold text-gray-700 block">Phone:</span>
-                        <span id="vendorPhone" class="text-gray-900">08089386770</span>
-                    </div>
-                    <div class="sm:col-span-2">
-                        <span class="font-semibold text-gray-700 block">Business Address:</span>
-                        <span id="vendorAddress" class="text-gray-900">No 19, Odebode Close, Akede Street, Basorun, Ibadan</span>
-                    </div>
-                </div>
-                <div class="flex flex-wrap gap-4 mt-4">
-                    <a href="VendorEditProfile.html" class="bg-black text-white px-4 py-2 rounded hover:bg-teal-600 transition font-semibold">Edit Profile</a>
-                    <a href="VendorDashboard.html" class="bg-gray-200 text-black px-4 py-2 rounded hover:bg-gray-300 transition font-semibold">Go to Dashboard</a>
-                </div>
-            </div>
-        </div>
-    </main>
+  <!-- Hero Section -->
+  <section class="relative bg-cover bg-center h-96" style="background-image: url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f');">
+    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+      <h2 class="text-4xl font-bold text-white text-center px-4">The Latest in Fashion Trends</h2>
+    </div>
+  </section>
 
-     <!-- footer---------------- -->
+  <!-- Blog Articles -->
+  <section class="container mx-auto px-4 py-12">
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 ">
+      
+      <!-- Blog Post Card -->
+      <article class="bg-white rounded-2xl shadow-lg overflow-hidden">
+        <img src="images/gif1.gif" alt="Post" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Summer 2025 Essentials</h3>
+          <p class="text-sm text-gray-600 mb-4">Explore light, breathable pieces and timeless accessories dominating the season.</p>
+          <a href="blog.html" class="text-blue-600 hover:underline font-medium">Read More →</a>
+        </div>
+      </article>
+
+      <article class="bg-white rounded-2xl shadow-lg overflow-hidden">
+        <img src="images/wardrobe-modern-women-clothing-hanging-floor-hanger-rack-assortment-casual-apparels-collection-stylish-summer-garments-flat-vector-illustration-isolated-white-background_198278-15738.jpg" alt="Post" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Men’s Street Style Guide</h3>
+          <p class="text-sm text-gray-600 mb-4">How to mix modern streetwear with classic staples for a standout look.</p>
+          <a href="blog.html" class="text-blue-600 hover:underline font-medium">Read More →</a>
+        </div>
+      </article>
+
+      <article class="bg-white rounded-2xl shadow-lg overflow-hidden">
+        <img src="images/signuppix.avif" alt="Post" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Layering for All Seasons</h3>
+          <p class="text-sm text-gray-600 mb-4">Master the art of layering while staying stylish and comfortable.</p>
+          <a href="blog.html" class="text-blue-600 hover:underline font-medium">Read More →</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- footer---------------- -->
  <footer class="footer">
     <div class="footer-container">
      
@@ -160,8 +177,9 @@
     </div>
   </footer> 
 
-  <script>
-    function updateCartCount() {
+ 
+<script>
+  function updateCartCount() {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
     const cartCountEl = document.getElementById("cartCount");
     const totalCount = cart.reduce((acc, item) => acc + (item.quantity || 1), 0);
@@ -169,6 +187,6 @@
   }
 
   updateCartCount();
-  </script>
-</body>
-</html>
+</script>
+  </body>
+  </html>

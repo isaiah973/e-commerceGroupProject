@@ -28,17 +28,18 @@
       <a class="hover:border-b-4 hover:border-b-[#ffd700] font-semibold" href="women.html"><p>Women</p></a>
       <a class="hover:border-b-4 hover:border-b-[#ffd700] font-semibold" href="men.html"><p>Men</p></a>
       <a class="hover:border-b-4 hover:border-b-[#ffd700] font-semibold" href="jewellery.html"><p>Jewellery</p></a>
+      <a class="hover:border-b-4 hover:border-b-[#ffd700] font-semibold" href="blog.html"><p>Blog</p></a>
 
     </div>
 
     <a href="index.html"><div class="flex flex-col"><p class="text-center m-auto font-bold text-2xl lg:mr-2 mr-[50px]">PAGATTS</p>
     <div id="pagatts-slide" class="animate-ping bg-[#ffd700] h-[4px] w-[107px]"></div></div>
     </a>
-    <div class=" flex space-x-3 lg:items-center items-end lg:justify-center justify-between">
+    <div class=" flex space-x-3 lg:items-center items-end lg:justify-between">
       <div class="flex mr-[-80px] lg:mr-0 md:mr-0 md:ml-0 lg:ml-0 ml-[100px]"><input placeholder="Search" type="text" class="text-gray-400 border-[1px] md:w-20 lg:w-[200px] w-[100px] border-gray-300 outline-none mr-[5px] pl-2 placeholder:text-sm"><button class="border-[1px] border-gray-300 ml-[-5px] pl-[1px] flex items-center justify-cente"><img class="w-[18px] " src="images/search (1).png" alt=""></button></div>
      <div class="">
        <div class="hidden lg:flex md:flex flex gap-5 items-center justify-center">
-         <img id="loginIcon" href="" class="w-[22px]" src="images/icons8-user-32.png" alt="">
+         <img onclick="toggleBox()" id="loginIcon" href="" class="w-[22px] cursor-pointer" src="images/icons8-user-32.png" alt="">
          <!--MYCART AND UPDATE CART COUNT-->
        <a href="myCart.html" class="relative">
           <img class="w-[20px]" src="images/shopping-cart.png" alt="Cart">
@@ -86,7 +87,7 @@
       <a href="discount.html"><Button class="bg-black font-bold text-white py-3 px-5 hover:bg-[#cdd3d3] hover:text-black hover:border-black hover:border-[2px]">Shop NOW!</button></a>
     </div>
     <!---Login prompt-->
-    <div id="loginPromptBox" class="w-[100px] h-[55px] bg-white absolute z-[2000] top-[7vh] right-[120px] flex flex-col p-2">
+    <div id="loginPromptBox" class="w-[100px] h-[55px] bg-white fixed z-[2000] top-[7vh] right-[10%] flex flex-col p-2">
       <a class="hover:bg-black hover:text-white text-sm" href="userlogin.html"><p>User</p></a>
       <hr class="">
       <a class="hover:bg-black hover:text-white text-sm"  href="vendorlogin.html"><p>Vendor</p></a>
@@ -118,6 +119,44 @@
 
     </ul>
   </article>
+
+ <!-- Blog Articles -->
+  <section class="container mx-auto px-4 py-12">
+    <h1 class="text-2xl font-bold text-center mb-10">Blog</h1>
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 ">
+      
+      <!-- Blog Post Card -->
+      <article class="bg-white rounded-2xl shadow-md overflow-hidden hover:scale-[1.1]">
+        <img src="images/gif1.gif" alt="Post" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Summer 2025 Essentials</h3>
+          <p class="text-sm text-gray-600 mb-4">Explore light, breathable pieces and timeless accessories dominating the season.</p>
+          <a href="blog.html" class="text-blue-600 hover:underline font-medium">Read More →</a>
+        </div>
+      </article>
+
+      <article class="bg-white rounded-2xl shadow-md overflow-hidden hover:scale-[1.1]">
+        <img src="images/wardrobe-modern-women-clothing-hanging-floor-hanger-rack-assortment-casual-apparels-collection-stylish-summer-garments-flat-vector-illustration-isolated-white-background_198278-15738.jpg" alt="Post" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Men’s Street Style Guide</h3>
+          <p class="text-sm text-gray-600 mb-4">How to mix modern streetwear with classic staples for a standout look.</p>
+          <a href="blog.html" class="text-blue-600 hover:underline font-medium">Read More →</a>
+        </div>
+      </article>
+
+      <article class="bg-white rounded-2xl shadow-md overflow-hidden hover:scale-[1.1]">
+        <img src="images/signuppix.avif" alt="Post" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Layering for All Seasons</h3>
+          <p class="text-sm text-gray-600 mb-4">Master the art of layering while staying stylish and comfortable.</p>
+          <a href="blog.html" class="text-blue-600 hover:underline font-medium">Read More →</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+
 <!-- MEN'S CLOTHING -->
   <article>
     <div>
@@ -159,11 +198,11 @@
       <div class="footer-column">
         <h4>USEFULL LINKS</h4>
         <ul>
-          <li>Partners</li>
-          <li>Bloggers</li>
-          <li>Support</li>
-          <li>Terms of Use</li>
-          <li>Press</li>
+          <a href="women.html"><li>Women</li></a>
+          <a href="men.html"><li>Men</li></a>
+          <a href="jewellery.html"><li>Jewellery</li></a>
+          <a href="blog.html"><li>Blog</li></a>
+          <a href="contact.html"><li>Contact Us</li></a>
         </ul>
       </div>
 

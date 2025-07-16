@@ -8,39 +8,67 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 font-sans min-h-screen flex flex-col">
-    <nav class="bg-teal-500 text-white py-4 px-4 md:px-8 flex justify-between items-center">
-        <span class="font-bold text-xl md:text-2xl"><a href="index.html"></a> Vendor Dashboard</span>
-        <button id="sidebarToggle" class="md:hidden bg-white text-teal-600 px-3 py-1 rounded font-semibold">
-            Menu
-        </button>
-        <a href="VendorLogin.html" class="hidden md:inline bg-white text-teal-600 px-4 py-2 rounded hover:bg-teal-100 font-semibold">Logout</a>
-    </nav>
+   <!-- NAVBAR------------------------- -->
+  <nav class="relative sticky top-0 z-[10000] bg-white md:gap-[100px] md:w-full  flex lg:gap-[200px] bg-whitesmoke h-[7vh] lg:px-2.5 px-2 justify-center font-medium items-center shadow-lg">
+    <!-- burger menu -->
+     <img onclick="toggle()" id="burger" class=" absolute left-5 w-[30px] lg:hidden md:hidden" src="images/burger-bar.png" alt="">
+     <!--  -->
+   
+    <div class="hidden lg:flex md:flex md:space-x-5 flex lg:space-x-10 items-center justify-center text-[#4b4a44] text-[16px]">
+      <a class="hover:border-b-4 hover:border-b-[#ffd700] font-semibold" href="women.html"><p>Women</p></a>
+      <a class="hover:border-b-4 hover:border-b-[#ffd700] font-semibold" href="men.html"><p>Men</p></a>
+      <a class="hover:border-b-4 hover:border-b-[#ffd700] font-semibold" href="jewellery.html"><p>Jewellery</p></a>
+
+    </div>
+
+    <a href="index.html"><div class="flex flex-col"><p class="text-center m-auto font-bold text-2xl lg:mr-2 mr-[50px]">PAGATTS</p>
+    <div id="pagatts-slide" class="animate-ping bg-[#ffd700] h-[4px] w-[107px]"></div></div>
+    </a>
+    <div class=" flex space-x-3 lg:items-center items-end lg:justify-between">
+      <div class="flex mr-[-80px] lg:mr-0 md:mr-0 md:ml-0 lg:ml-0 ml-[100px]"><input placeholder="Search" type="text" class="text-gray-400 border-[1px] md:w-20 lg:w-[200px] w-[100px] border-gray-300 outline-none mr-[5px] pl-2 placeholder:text-sm"><button class="border-[1px] border-gray-300 ml-[-5px] pl-[1px] flex items-center justify-cente"><img class="w-[18px] " src="images/search (1).png" alt=""></button></div>
+     <div class="">
+       <div class="hidden lg:flex md:flex flex gap-5 items-center justify-center">
+         <img onclick="toggleBox()" id="loginIcon" href="" class="w-[22px] cursor-pointer" src="images/icons8-user-32.png" alt="">
+         <!--MYCART AND UPDATE CART COUNT-->
+       <a href="myCart.html" class="relative">
+          <img class="w-[20px]" src="images/shopping-cart.png" alt="Cart">
+          <span id="cartCount" class="absolute -top-2 -right-2 bg-black text-white text-[10px] w-[18px] h-[18px] rounded-full flex items-center justify-center font-bold">0</span>
+       </a>
+
+        <a href="contact.html"><img class="w-[20px]" src="images/icons8-contact-50 (1).png" alt=""></a>
+        
+      </div>
+      <div class="bg-[#ffd700] h-[4px] w-[107px] mt-[1px] hidden lg:flex md:flex"></div>
+     </div>
+    </div>
+  </nav>
     <div class="flex flex-1">
         <!-- Sidebar -->
         <aside id="sidebar" class="fixed md:static inset-y-0 left-0 z-30 w-64 bg-white shadow flex flex-col py-8 px-4 space-y-4 transform -translate-x-full md:translate-x-0 transition-transform duration-200 md:flex md:relative md:translate-x-0 md:w-64"
             style="height:100vh;">
-            <a href="#" class="flex items-center space-x-2 text-teal-600 font-semibold hover:bg-teal-50 px-3 py-2 rounded">
+            <a href="#" class="flex items-center space-x-2 text-black font-semibold hover:bg-teal-50 px-3 py-2 rounded">
                 <span>Dashboard</span>
             </a>
-            <a href="#" class="flex items-center space-x-2 text-teal-600 font-semibold hover:bg-teal-50 px-3 py-2 rounded">
+            <a href="#" class="flex items-center space-x-2 text-black font-semibold hover:bg-teal-50 px-3 py-2 rounded">
                 <span>Products</span>
             </a>
-            <a href="#" class="flex items-center space-x-2 text-teal-600 font-semibold hover:bg-teal-50 px-3 py-2 rounded">
+            <a href="#" class="flex items-center space-x-2 text-black font-semibold hover:bg-teal-50 px-3 py-2 rounded">
                 <span>Customers</span>
             </a>
-            <a href="#" class="flex items-center space-x-2 text-teal-600 font-semibold hover:bg-teal-50 px-3 py-2 rounded">
+            <a href="#" class="flex items-center space-x-2 text-black font-semibold hover:bg-teal-50 px-3 py-2 rounded">
                 <span>Orders</span>
             </a>
-            <a href="#" class="flex items-center space-x-2 text-teal-600 font-semibold hover:bg-teal-50 px-3 py-2 rounded">
+            <a href="#" class="flex items-center space-x-2 text-black font-semibold hover:bg-teal-50 px-3 py-2 rounded">
                 <span>Shipments</span>
             </a>
-            <a href="#" class="flex items-center space-x-2 text-teal-600 font-semibold hover:bg-teal-50 px-3 py-2 rounded">
+            <a href="#" class="flex items-center space-x-2 text-black font-semibold hover:bg-teal-50 px-3 py-2 rounded">
                 <span>Transactions</span>
             </a>
-            <a href="#" class="flex items-center space-x-2 text-teal-600 font-semibold hover:bg-teal-50 px-3 py-2 rounded">
+            <a href="#" class="flex items-center space-x-2 text-black font-semibold hover:bg-teal-50 px-3 py-2 rounded">
                 <span>Settings</span>
             </a>
             <a href="VendorLogin.html" class="flex items-center space-x-2 text-red-500 font-semibold hover:bg-red-50 px-3 py-2 rounded mt-8">
@@ -51,41 +79,176 @@
         <div id="overlay" class="fixed inset-0 bg-black bg-opacity-30 z-20 hidden md:hidden"></div>
         <!-- Main Content -->
         <main class="flex-1 p-4 md:p-8 ml-0 md:ml-0">
-            <h1 class="text-xl md:text-2xl font-bold text-teal-700 mb-6">Dashboard</h1>
+            <h1 class="text-xl md:text-2xl font-bold text-black mb-6">Dashboard</h1>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="bg-white rounded shadow p-6 flex flex-col items-center">
-                    <span class="font-semibold text-teal-600 mb-2">Products</span>
+                    <span class="font-semibold text-black mb-2">Products</span>
                     <span class="text-2xl md:text-3xl font-bold text-gray-700">12</span>
                 </div>
                 <div class="bg-white rounded shadow p-6 flex flex-col items-center">
-                    <span class="font-semibold text-teal-600 mb-2">Customers</span>
+                    <span class="font-semibold text-black mb-2">Customers</span>
                     <span class="text-2xl md:text-3xl font-bold text-gray-700">34</span>
                 </div>
                 <div class="bg-white rounded shadow p-6 flex flex-col items-center">
-                    <span class="font-semibold text-teal-600 mb-2">Orders</span>
+                    <span class="font-semibold text-black mb-2">Orders</span>
                     <span class="text-2xl md:text-3xl font-bold text-gray-700">8</span>
                 </div>
                 <div class="bg-white rounded shadow p-6 flex flex-col items-center">
-                    <span class="font-semibold text-teal-600 mb-2">Shipments</span>
+                    <span class="font-semibold text-black mb-2">Shipments</span>
                     <span class="text-2xl md:text-3xl font-bold text-gray-700">5</span>
                 </div>
                 <div class="bg-white rounded shadow p-6 flex flex-col items-center">
-                    <span class="font-semibold text-teal-600 mb-2">Transactions</span>
+                    <span class="font-semibold text-black mb-2">Transactions</span>
                     <span class="text-2xl md:text-3xl font-bold text-gray-700">₦120,000</span>
                 </div>
                 <div class="bg-white rounded shadow p-6 flex flex-col items-center">
-                    <span class="font-semibold text-teal-600 mb-2">Settings</span>
+                    <span class="font-semibold text-black mb-2">Settings</span>
                     <span class="text-gray-500">Manage your account</span>
                 </div>
+                <!-- ////// -->
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-6">
+
+  <div class="bg-white shadow-lg rounded-2xl p-6 w-full max-w-md">
+    <h2 class="text-2xl font-semibold mb-4 text-gray-800">Upload Product</h2>
+
+    <label class="block mb-4">
+      <span class="cursor-pointer sr-only">Choose files</span>
+      <input 
+        type="file" 
+        id="fileInput" 
+        multiple
+        class="block w-full text-sm text-gray-600 file:mr-4 file:py-2 file:px-4
+               file:rounded-full file:border-0
+               file:text-sm file:font-semibold
+               file:bg-blue-50 file:text-blue-700
+               hover:file:bg-blue-100"
+      />
+    </label>
+
+    <div id="fileList" class="text-sm text-gray-700 space-y-1">
+      <p class="text-gray-500 italic">No files selected.</p>
+    </div>
+  </div>
+
+  <script>
+    const fileInput = document.getElementById('fileInput');
+    const fileList = document.getElementById('fileList');
+
+    fileInput.addEventListener('change', () => {
+      const files = fileInput.files;
+      fileList.innerHTML = '';
+
+      if (files.length === 0) {
+        fileList.innerHTML = '<p class="text-gray-500 italic">No files selected.</p>';
+        return;
+      }
+
+      const ul = document.createElement('ul');
+      for (let i = 0; i < files.length; i++) {
+        const li = document.createElement('li');
+        li.textContent = `• ${files[i].name} (${(files[i].size / 1024).toFixed(1)} KB)`;
+        ul.appendChild(li);
+      }
+      fileList.appendChild(ul);
+    });
+  </script>
+
+</body>
             </div>
         </main>
     </div>
-    <footer class="bg-teal-500 text-white text-center py-2 mt-auto">
-        <p class="text-sm">
-            &copy; 2025 PAGATTS. All rights reserved.
+    <!-- footer---------------- -->
+ <footer class="footer">
+    <div class="footer-container">
+     
+      <div class="footer-column">
+        <h2 class="logo">PAGATTS</h2>
+        <p>
+          PAGATTS is your premier destination for [style/type of clothing and Jewellery, e.g., stylish, comfortable, sustainable]. We're passionate about delivering high-quality clothing that empowers individuals to express themselves with confidence.
+
         </p>
-    </footer>
+
+        <div class="payment-icons">
+          <!-- <img src="https://www.citypng.com/photo/18932/download-visa-card-logo-icon-png" alt="Visa">
+          <img src="https://www.citypng.com/photo/18771/hd-mastercard-payment-logo-transparent-background" alt="MasterCard">
+          <img src="https://www.citypng.com/photo/18767/transparent-hd-paypal-logo" alt="PayPal"> -->
+        </div>
+      </div>
+
+     
+      <div class="footer-column">
+        <h4>USEFULL LINKS</h4>
+        <ul>
+          <a href="women.html"><li>Women</li></a>
+          <a href="men.html"><li>Men</li></a>
+          <a href="jewellery.html"><li>Jewellery</li></a>
+          <li>Terms of Use</li>
+          <a href="contact.html"><li>Contact Us</li></a>
+        </ul>
+      </div>
+
+    
+      <div class="footer-column">
+        <h4>SITEMAP</h4>
+        <ul>
+          <li>Partners</li>
+          <li>Bloggers</li>
+          <li>Support</li>
+          <li>Terms of Use</li>
+        </ul>
+      </div>
+
+     
+      <div class="footer-column">
+        <h4>SHIPPING & RETURNS</h4>
+        <ul>
+          <li>About Us</li>
+          <li>Track Orders</li>
+          <li>Returns</li>
+          <li>Jobs</li>
+          <li>Shipping</li>
+          <li>Blog</li>
+        </ul>
+      </div>
+
+     
+      <div class="footer-column">
+        <h4>CONTACT</h4>
+        <ul>
+          <li>PAGATTS Company Ltd</li>
+          <li>123, Awolowo Road, Ikoyi, Lagos</li>
+          <li>09017859924, 09066482224</li>
+          <li>PAGATTS@gmail.com</li>
+        </ul>
+      </div>
+    </div>
+
+     
+       <div class="newsletter">
+  <h3>Subscribe to our Newsletter</h3>
+  <form id="newsletter-form">
+    <input class="text-black" type="email" id="newsletter-email" placeholder="Enter your email" required />
+    <button type="submit">Subscribe</button>
+  </form>
+   <p id="newsletter-message"></p>
+  </div>
+
+    <div class="footer-bottom">
+      <p>Copyright ©2025 All rights reserved | Powered by  PAGATTS</a></p>
+    </div>
+  </footer> 
+
     <script>
+
+        function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cartCountEl = document.getElementById("cartCount");
+    const totalCount = cart.reduce((acc, item) => acc + (item.quantity || 1), 0);
+    cartCountEl.textContent = totalCount;
+  }
+
+  updateCartCount();
         // Sidebar toggle for mobile
         const sidebar = document.getElementById('sidebar');
         const overlay = document.getElementById('overlay');

@@ -32,7 +32,7 @@
       <div class="flex"><input placeholder="Search" type="text" class="text-gray-400 border-[1px] md:w-20 lg:w-[200px] border-gray-300 outline-none mr-[5px] pl-2 placeholder:text-sm"><button class="border-[1px] border-gray-300 ml-[-5px] pl-[1px] flex items-center justify-cente"><img class="w-[18px] " src="images/search (1).png" alt=""></button></div>
      <div class="">
        <div class="flex gap-5 items-center justify-center">
-         <img id="loginIcon" href="" class="w-[22px]" src="images/icons8-user-32.png" alt="">
+         <img onclick="toggleBox()" id="loginIcon" href="" class="w-[22px] cursor-pointer" src="images/icons8-user-32.png" alt="">
          <!--MYCART AND UPDATE CART COUNT-->
        <a href="myCart.html" class="relative">
           <img class="w-[20px]" src="images/shopping-cart.png" alt="Cart">
@@ -48,7 +48,12 @@
   </nav>
   
   <section class="relative px-5 py-5 ">
-
+      <!---Login prompt-->
+    <div id="loginPromptBox" class="w-[100px] h-[55px] bg-white fixed z-[2000] top-[7vh] right-[10%] flex flex-col p-2">
+      <a class="hover:bg-black hover:text-white text-sm" href="userlogin.html"><p>User</p></a>
+      <hr class="">
+      <a class="hover:bg-black hover:text-white text-sm"  href="vendorlogin.html"><p>Vendor</p></a>
+    </div>
 
      <aside id="sidebar">
       <div class="absolute  h-[100vh] w-[100%] bg-white">
@@ -81,7 +86,7 @@
 
 
 
-        <div class="hidden lg:block md:block w-[17%] h-full rounded-[10px] bg-white">
+        <div class="hidden lg:block md:block w-[17%] h-full rounded-[10px] bg-white border-[2px] border-[#ffd700]">
           <ul class="py-5 flex flex-col">
 
             <li class="cursor-pointer py-2 pl-4 flex items-baseline bg-white relative hover:bg-gray-300"><img class="w-6" src="images/bag.png" alt=""><p class="hidden lg:block md:block absolute left-[55px] top-[12px]">My Account</p></li>
@@ -101,13 +106,13 @@
 
         <div class="w-full bg-gr-50 h-full rounded-[10px] px-5 py-2 flex flex-col">
           <div class="flex flex-col">
-            <h1 class="ml-14 text-[20px]">Account Overview</h1>
+            <h1 class="ml-14 text-[20px] font-bold">Account Overview</h1>
           <hr class="mb-3">
           </div>
           
           <div class="flex items-center flex-wrap h-[100%] gap-2">
-            <div class="bg-[#b2d8d8] w-[90%] h-[60%] shadow-md rounded-[10px] p-3">
-                  <p class="text-[17px]">ACCOUNT DETAILS</p>
+            <div class="bg-white w-[90%] border-[2px] border-[#ffd700] h-[60%] shadow-md rounded-[10px] p-3">
+                  <p class="text-[17px] font-bold">ACCOUNT DETAILS</p>
                   <hr>
                   
 
@@ -116,18 +121,18 @@
                     <p id="lastnameCell"></p>
                   </div>
                    
-                  <p class="mt-3">Your Email:</p>
+                  <p class="mt-3 font-bold">Your Email:</p>
                   <p id="emailCell"></p>
                   
             </div>
 
-            <div class="bg-[#b2d8d8] w-[90%] h-[60%] shadow-md rounded-[10px] p-3 ">
-                  <p class="text-[17px]">ADDRESS BOOK</p>
+            <div class="bg-white w-[90%] border-[2px] border-[#ffd700] h-[60%] shadow-md rounded-[10px] p-3 ">
+                  <p class="text-[17px] font-bold">ADDRESS BOOK</p>
                   <hr>
                   
-                  <p class="mt-4 mb-1">Your default shipping address:</p>
+                  <p class="mt-4 mb-1 font-bold">Your default shipping address:</p>
                   <p id="addressCell" class="mb-3"></p> 
-                  <p>Your phone Number:</p>
+                  <p class="font-bold">Your phone Number:</p>
                   <p id="phoneCell"></p> 
                 
             </div>
@@ -140,10 +145,110 @@
   
       
   
-  
+   <!-- footer---------------- -->
+ <footer class="footer mt-[300px]">
+    <div class="footer-container">
+     
+      <div class="footer-column">
+        <h2 class="logo">PAGATTS</h2>
+        <p>
+          PAGATTS is your premier destination for [style/type of clothing and Jewellery, e.g., stylish, comfortable, sustainable]. We're passionate about delivering high-quality clothing that empowers individuals to express themselves with confidence.
+
+        </p>
+
+        <div class="payment-icons">
+          <!-- <img src="https://www.citypng.com/photo/18932/download-visa-card-logo-icon-png" alt="Visa">
+          <img src="https://www.citypng.com/photo/18771/hd-mastercard-payment-logo-transparent-background" alt="MasterCard">
+          <img src="https://www.citypng.com/photo/18767/transparent-hd-paypal-logo" alt="PayPal"> -->
+        </div>
+      </div>
+
+     
+      <div class="footer-column">
+        <h4>USEFULL LINKS</h4>
+        <ul>
+          <a href="women.html"><li>Women</li></a>
+          <a href="men.html"><li>Men</li></a>
+          <a href="jewellery.html"><li>Jewellery</li></a>
+          <a href="blog.html"><li>Blog</li></a>
+          <a href="contact.html"><li>Contact Us</li></a>
+        </ul>
+      </div>
+
+    
+      <div class="footer-column">
+        <h4>SITEMAP</h4>
+        <ul>
+          <li>Partners</li>
+          <li>Bloggers</li>
+          <li>Support</li>
+          <li>Terms of Use</li>
+        </ul>
+      </div>
+
+     
+      <div class="footer-column">
+        <h4>SHIPPING & RETURNS</h4>
+        <ul>
+          <li>About Us</li>
+          <li>Track Orders</li>
+          <li>Returns</li>
+          <li>Jobs</li>
+          <li>Shipping</li>
+          <li>Blog</li>
+        </ul>
+      </div>
+
+     
+      <div class="footer-column">
+        <h4>CONTACT</h4>
+        <ul>
+          <li>PAGATTS Company Ltd</li>
+          <li>123, Awolowo Road, Ikoyi, Lagos</li>
+          <li>09017859924, 09066482224</li>
+          <li>PAGATTS@gmail.com</li>
+        </ul>
+      </div>
+    </div>
+
+     
+       <div class="newsletter">
+  <h3>Subscribe to our Newsletter</h3>
+  <form id="newsletter-form">
+    <input class="text-black" type="email" id="newsletter-email" placeholder="Enter your email" required />
+    <button type="submit">Subscribe</button>
+  </form>
+   <p id="newsletter-message"></p>
+  </div>
+
+    <div class="footer-bottom">
+      <p>Copyright ©2025 All rights reserved | Powered by  PAGATTS</a></p>
+    </div>
+  </footer> 
+
  
   <script>
+    function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cartCountEl = document.getElementById("cartCount");
+    const totalCount = cart.reduce((acc, item) => acc + (item.quantity || 1), 0);
+    cartCountEl.textContent = totalCount;
+  }
+
+  updateCartCount();
   
+  const loginBox = document.getElementById("loginPromptBox");
+
+const loginBtn = document.getElementById("loginIcon");
+loginBox.style.display="none"
+
+  function toggleBox() {
+     if(loginBox.style.display === "none") {
+      loginBox.style.display = "flex"
+    } else {
+      loginBox.style.display = "none"
+    }
+  };
 
     // sidebar.style.display="none"
 

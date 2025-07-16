@@ -75,9 +75,91 @@
    <div class="flex items-center justify-center h-[85vh] w-[100%] mt-5">
      <div
       id="modalProduct"
-      class="border-[2px] inset-0 w-[70%] z-[1000] h-[85vh] bg-white flex items-center justify-center shadow-lg m-[h-auto]"
+      class="border-[2px] inset-0 w-[100%] z-[1000] h-[85vh] bg-white flex items-center justify-center shadow-lg m-[h-auto]"
     ></div>
    </div>
+
+
+   <!-- footer---------------- -->
+ <footer class="footer mt-8">
+    <div class="footer-container">
+     
+      <div class="footer-column">
+        <h2 class="logo">PAGATTS</h2>
+        <p>
+          PAGATTS is your premier destination for [style/type of clothing and Jewellery, e.g., stylish, comfortable, sustainable]. We're passionate about delivering high-quality clothing that empowers individuals to express themselves with confidence.
+
+        </p>
+
+        <div class="payment-icons">
+          <!-- <img src="https://www.citypng.com/photo/18932/download-visa-card-logo-icon-png" alt="Visa">
+          <img src="https://www.citypng.com/photo/18771/hd-mastercard-payment-logo-transparent-background" alt="MasterCard">
+          <img src="https://www.citypng.com/photo/18767/transparent-hd-paypal-logo" alt="PayPal"> -->
+        </div>
+      </div>
+
+     
+      <div class="footer-column">
+        <h4>USEFULL LINKS</h4>
+        <ul>
+          <a href="women.html"><li>Women</li></a>
+          <a href="men.html"><li>Men</li></a>
+          <a href="jewellery.html"><li>Jewellery</li></a>
+          <a href="blog.html"><li>Blog</li></a>
+          <a href="contact.html"><li>Contact Us</li></a>
+        </ul>
+      </div>
+
+    
+      <div class="footer-column">
+        <h4>SITEMAP</h4>
+        <ul>
+          <li>Partners</li>
+          <li>Bloggers</li>
+          <li>Support</li>
+          <li>Terms of Use</li>
+        </ul>
+      </div>
+
+     
+      <div class="footer-column">
+        <h4>SHIPPING & RETURNS</h4>
+        <ul>
+          <li>About Us</li>
+          <li>Track Orders</li>
+          <li>Returns</li>
+          <li>Jobs</li>
+          <li>Shipping</li>
+          <li>Blog</li>
+        </ul>
+      </div>
+
+     
+      <div class="footer-column">
+        <h4>CONTACT</h4>
+        <ul>
+          <li>PAGATTS Company Ltd</li>
+          <li>123, Awolowo Road, Ikoyi, Lagos</li>
+          <li>09017859924, 09066482224</li>
+          <li>PAGATTS@gmail.com</li>
+        </ul>
+      </div>
+    </div>
+
+     
+       <div class="newsletter">
+  <h3>Subscribe to our Newsletter</h3>
+  <form id="newsletter-form">
+    <input class="text-black" type="email" id="newsletter-email" placeholder="Enter your email" required />
+    <button type="submit">Subscribe</button>
+  </form>
+   <p id="newsletter-message"></p>
+  </div>
+
+    <div class="footer-bottom">
+      <p>Copyright ©2025 All rights reserved | Powered by  PAGATTS</a></p>
+    </div>
+  </footer> 
     <script>
       const sidebar = document.getElementById("sidebar");
    sidebar.style.display="none";
@@ -98,7 +180,7 @@
 
         // inject modal content
         modal.innerHTML = `
-        <div class="shadow-lg w-[60%] h-[89%] flex items-center space-x-5 border-[3px] px-4">
+        <div class="shadow-lg w-[100%] h-[89%] flex items-center space-x-5 border-[3px] px-4">
         <div class="flex items-center justify-center w-[400px] h-[400px] bg-white border-[5px] border-[#ffd700] rounded-[1px]">
           <img class="w-full h-full object-contain" src="${divItem.image}" alt="">
         </div>

@@ -480,12 +480,15 @@ const data = [
 const loginBox = document.getElementById("loginPromptBox");
 
 const loginBtn = document.getElementById("loginIcon");
+loginBox.style.display="none"
 
-
-  loginBtn.addEventListener("click", () => {
-    loginBox.style.display = "flex";
-  })
-
+  function toggleBox() {
+     if(loginBox.style.display === "none") {
+      loginBox.style.display = "flex"
+    } else {
+      loginBox.style.display = "none"
+    }
+  }
 
 
 //Generate Random items(3) for Popular Picks
@@ -509,7 +512,7 @@ function displayProducts(popular) {
     li.className = "product";
 
     li.innerHTML = `
-    <div class="w-[270px] shadow-lg pb-4 flex flex-col items-center justify-center mb-[70px]">
+    <div class="w-[270px] shadow-lg pb-4 flex flex-col items-center justify-center mb-[70px] hover:scale-[1.03]">
     
       <div class="flex items-center justify-center w-[100%] h-[300px] bg-white border-[5px] border-[#ffd700] rounded-[1px]">
           <img id="${d.image}" src="${d.image}" alt="">
@@ -558,7 +561,7 @@ function displayProducts(popular) {
       newDiv.className = "productDiv";
 
       newDiv.innerHTML = `
-             <div class="shadow-lg w-[60%] h-[89%] flex items-center space-x-5 border-[3px] px-4">
+             <div class="shadow-lg w-[60%] h-[89%] flex items-center space-x-5 border-[3px] px-4 ">
     <div class="flex items-center justify-center w-[400px] h-[400px] bg-white border-[5px] border-[#ffd700] rounded-[1px]">
       <img class="w-full h-full object-contain" src="${d.image}" alt="">
     </div>
@@ -615,7 +618,7 @@ function displayFewProducts(fewData) {
     liFew.className = "product";
 
     liFew.innerHTML = `
-    <div class="w-[270px] shadow-lg pb-4 flex flex-col items-center justify-center mb-[70px]">
+    <div class="w-[270px] shadow-lg pb-4 flex flex-col items-center justify-center mb-[70px] hover:scale-[1.03]">
       <div id="${d.image}" class="flex items-center justify-center w-[100%] h-[300px] bg-white border-[5px] border-[#ffd700] rounded-[1px]">
           <img src="${d.image}" alt="">
       </div>

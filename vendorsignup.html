@@ -8,20 +8,45 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 font-sans min-h-screen flex flex-col">
-    <nav class="flex flex-col md:flex-row gap-2 md:gap-[230px] text-white bg-teal-500 h-auto md:h-[7vh] px-6 md:px-[100px] justify-center font-medium items-center">
-        <div class="flex flex-col items-center md:items-start">
-            <a href="index.html"><p class="font-bold text-xl md:text-2xl">PAGATTS</p></a>
-            <div id="pagatts-slide" class="animate-ping bg-[#ffd700] h-[4px] w-[107px]"></div>
-        </div>
-        <div class="flex flex-col items-center md:items-end">
-            <p class="font-bold text-xl md:text-2xl">Vendor</p>
-        </div>
-    </nav>
+     <!-- NAVBAR------------------------- -->
+  <nav class="relative sticky top-0 z-[10000] bg-white md:gap-[100px] md:w-full  flex lg:gap-[200px] bg-whitesmoke h-[7vh] lg:px-2.5 px-2 justify-center font-medium items-center shadow-lg">
+    <!-- burger menu -->
+     <img onclick="toggle()" id="burger" class=" absolute left-5 w-[30px] lg:hidden md:hidden" src="images/burger-bar.png" alt="">
+     <!--  -->
+   
+    <div class="hidden lg:flex md:flex md:space-x-5 flex lg:space-x-10 items-center justify-center text-[#4b4a44] text-[16px]">
+      <a class="hover:border-b-4 hover:border-b-[#ffd700] font-semibold" href="women.html"><p>Women</p></a>
+      <a class="hover:border-b-4 hover:border-b-[#ffd700] font-semibold" href="men.html"><p>Men</p></a>
+      <a class="hover:border-b-4 hover:border-b-[#ffd700] font-semibold" href="jewellery.html"><p>Jewellery</p></a>
 
-    <section id="signup-container" class="flex-1 flex items-center justify-center px-2 py-4 md:py-0">
+    </div>
+
+    <a href="index.html"><div class="flex flex-col"><p class="text-center m-auto font-bold text-2xl lg:mr-2 mr-[50px]">PAGATTS</p>
+    <div id="pagatts-slide" class="animate-ping bg-[#ffd700] h-[4px] w-[107px]"></div></div>
+    </a>
+    <div class=" flex space-x-3 lg:items-center items-end lg:justify-between">
+      <div class="flex mr-[-80px] lg:mr-0 md:mr-0 md:ml-0 lg:ml-0 ml-[100px]"><input placeholder="Search" type="text" class="text-gray-400 border-[1px] md:w-20 lg:w-[200px] w-[100px] border-gray-300 outline-none mr-[5px] pl-2 placeholder:text-sm"><button class="border-[1px] border-gray-300 ml-[-5px] pl-[1px] flex items-center justify-cente"><img class="w-[18px] " src="images/search (1).png" alt=""></button></div>
+     <div class="">
+       <div class="hidden lg:flex md:flex flex gap-5 items-center justify-center">
+         <img onclick="toggleBox()" id="loginIcon" href="" class="w-[22px] cursor-pointer" src="images/icons8-user-32.png" alt="">
+         <!--MYCART AND UPDATE CART COUNT-->
+       <a href="myCart.html" class="relative">
+          <img class="w-[20px]" src="images/shopping-cart.png" alt="Cart">
+          <span id="cartCount" class="absolute -top-2 -right-2 bg-black text-white text-[10px] w-[18px] h-[18px] rounded-full flex items-center justify-center font-bold">0</span>
+       </a>
+
+        <a href="contact.html"><img class="w-[20px]" src="images/icons8-contact-50 (1).png" alt=""></a>
+        
+      </div>
+      <div class="bg-[#ffd700] h-[4px] w-[107px] mt-[1px] hidden lg:flex md:flex"></div>
+     </div>
+    </div>
+  </nav>
+    <section id="signup-container" class="flex-1 flex items-center justify-center px-2 py-4 md:py-0 mt-10 mb-10">
         <div class="flex flex-col md:flex-row w-full max-w-5xl h-auto md:h-[80vh] bg-white rounded-xl shadow-lg overflow-hidden">
             <form 
                 class="flex flex-col px-5 py-7 items-center justify-center w-full md:w-[40%] h-full space-y-4"
@@ -30,7 +55,7 @@
                 method="get"
                 autocomplete="on"
             >
-                <div class="flex flex-row bg-teal-500 mt-2 md:mt-5 p-3 items-center justify-center w-full rounded">
+                <div class="flex flex-row bg-black mt-2 md:mt-5 p-3 items-center justify-center w-full rounded">
                     <p class="text-xl font-bold text-white">Registration Form</p>
                 </div>
 
@@ -109,7 +134,7 @@
 
                 <button 
                     type="submit"
-                    class="bg-teal-500 w-full py-3 text-center hover:bg-[#8c918c] text-white font-semibold rounded transition"
+                    class="bg-black w-full py-3 text-center hover:bg-[#8c918c] text-white font-semibold rounded transition"
                 >
                     Continue
                 </button>
@@ -126,14 +151,14 @@
                     </p>
                     <p>
                         Already have an account? 
-                        <a href="VendorLogin.html" class="text-teal-500 hover:underline">Log in</a>
+                        <a href="VendorLogin.html" class="text-black hover:underline">Log in</a>
                     </p>
                 </div>
             </form>
 
             <div class="w-full md:w-[60%] h-64 md:h-full">
                 <img 
-                    class="w-full h-full object-cover"
+                    class="w-full h-full object-contain"
                     src="images/signuppix.avif"
                     alt="signup image"
                 >
@@ -141,12 +166,97 @@
         </div>
     </section>
 
-    <footer class="bg-teal-500 text-white text-center py-2 mt-auto">
-        <p class="text-sm">
-            &copy; 2025 PAGATTS. All rights reserved.
+    <!-- footer---------------- -->
+ <footer class="footer">
+    <div class="footer-container">
+     
+      <div class="footer-column">
+        <h2 class="logo">PAGATTS</h2>
+        <p>
+          PAGATTS is your premier destination for [style/type of clothing and Jewellery, e.g., stylish, comfortable, sustainable]. We're passionate about delivering high-quality clothing that empowers individuals to express themselves with confidence.
+
         </p>
-    </footer>
+
+        <div class="payment-icons">
+          <!-- <img src="https://www.citypng.com/photo/18932/download-visa-card-logo-icon-png" alt="Visa">
+          <img src="https://www.citypng.com/photo/18771/hd-mastercard-payment-logo-transparent-background" alt="MasterCard">
+          <img src="https://www.citypng.com/photo/18767/transparent-hd-paypal-logo" alt="PayPal"> -->
+        </div>
+      </div>
+
+     
+      <div class="footer-column">
+        <h4>USEFULL LINKS</h4>
+        <ul>
+          <a href="women.html"><li>Women</li></a>
+          <a href="men.html"><li>Men</li></a>
+          <a href="jewellery.html"><li>Jewellery</li></a>
+          <li>Terms of Use</li>
+          <a href="contact.html"><li>Contact Us</li></a>
+        </ul>
+      </div>
+
+    
+      <div class="footer-column">
+        <h4>SITEMAP</h4>
+        <ul>
+          <li>Partners</li>
+          <li>Bloggers</li>
+          <li>Support</li>
+          <li>Terms of Use</li>
+        </ul>
+      </div>
+
+     
+      <div class="footer-column">
+        <h4>SHIPPING & RETURNS</h4>
+        <ul>
+          <li>About Us</li>
+          <li>Track Orders</li>
+          <li>Returns</li>
+          <li>Jobs</li>
+          <li>Shipping</li>
+          <li>Blog</li>
+        </ul>
+      </div>
+
+     
+      <div class="footer-column">
+        <h4>CONTACT</h4>
+        <ul>
+          <li>PAGATTS Company Ltd</li>
+          <li>123, Awolowo Road, Ikoyi, Lagos</li>
+          <li>09017859924, 09066482224</li>
+          <li>PAGATTS@gmail.com</li>
+        </ul>
+      </div>
+    </div>
+
+     
+       <div class="newsletter">
+  <h3>Subscribe to our Newsletter</h3>
+  <form id="newsletter-form">
+    <input class="text-black" type="email" id="newsletter-email" placeholder="Enter your email" required />
+    <button type="submit">Subscribe</button>
+  </form>
+   <p id="newsletter-message"></p>
+  </div>
+
+    <div class="footer-bottom">
+      <p>Copyright ©2025 All rights reserved | Powered by  PAGATTS</a></p>
+    </div>
+  </footer> 
+
     <script>
+
+        function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cartCountEl = document.getElementById("cartCount");
+    const totalCount = cart.reduce((acc, item) => acc + (item.quantity || 1), 0);
+    cartCountEl.textContent = totalCount;
+  }
+
+  updateCartCount();
         // Responsive password match validation
         document.getElementById('myform').addEventListener('submit', function(e) {
             const pw1 = document.getElementById('password1').value;
