@@ -477,6 +477,18 @@ const data = [
     origin: "Imported",
   },
 ];
+
+const searchBtn = document.getElementById("searchBtn");
+    const searchInput = document.getElementById("searchInput");
+
+    searchBtn.addEventListener("click", () => {
+      const query = encodeURIComponent(searchInput.value.trim());
+      if (query) {
+        window.location.href = `search.html?query=${query}`;
+      }
+    });
+
+
 const loginBox = document.getElementById("loginPromptBox");
 
 const loginBtn = document.getElementById("loginIcon");
@@ -489,6 +501,15 @@ loginBox.style.display="none"
       loginBox.style.display = "none"
     }
   }
+
+      const cartPopup = document.getElementById("cartPopup");
+    const closePopup = document.getElementById("closePopup");
+    closePopup.addEventListener("click", () => {
+      cartPopup.classList.add("hidden");
+    });
+
+   
+
 
 
 //Generate Random items(3) for Popular Picks
@@ -520,7 +541,7 @@ function displayProducts(popular) {
 
       <p class="px-5 text-[18px] text-[#36454F] font-bold mt-7 text-center">${d.title}</p>
 
-      <p class="text-center mt-4 text-2xl font-extralight">&#8358;${d.price}</p>
+      <p class="text-teal-700 text-center mt-4 text-3xl font-bold">&#8358;${d.price}</p>
 
       <div class="flex items-center justify-center mt-5">
       <button id="${d.id}" class="border-[2px] border-[#82878a] text-[15px] px-3 py-1 hover:bg-black hover:text-white hover:border-white">ADD TO CART</button>
@@ -545,7 +566,11 @@ function displayProducts(popular) {
             }
 
             localStorage.setItem("cart", JSON.stringify(cart));
-            alert(`${d.title} added to cart!`);
+            // alert(`${d.title} added to cart!`);     
+              cartPopup.classList.remove("hidden");
+    
+
+    
          
           });
      
@@ -625,7 +650,7 @@ function displayFewProducts(fewData) {
 
       <p class="px-5 text-[18px] text-[#36454F] font-bold mt-7 text-center">${d.title}</p>
 
-      <p class="text-center mt-4 text-2xl font-extralight">&#8358;${d.price}</p>
+      <p class="text-teal-700 text-center mt-4 text-3xl font-bold">&#8358;${d.price}</p>
 
       <div class="flex items-center justify-center mt-5">
         <button id="${d.id}" class="border-[2px] border-[#36454F] text-[15px] px-3 py-1 hover:bg-[#6d898e]">ADD TO CART</button>
@@ -651,7 +676,8 @@ function displayFewProducts(fewData) {
             }
 
             localStorage.setItem("cart", JSON.stringify(cart));
-            alert(`${d.title} added to cart!`);
+            // alert(`${d.title} added to cart!`);
+            cartPopup.classList.remove("hidden");
           });
       
       }

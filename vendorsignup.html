@@ -47,6 +47,12 @@
     </div>
   </nav>
     <section id="signup-container" class="flex-1 flex items-center justify-center px-2 py-4 md:py-0 mt-10 mb-10">
+       <!---Login prompt-->
+    <div id="loginPromptBox" class="w-[100px] h-[55px] bg-white fixed z-[2000] top-[7vh] right-[10%] flex flex-col p-2">
+      <a class="hover:bg-black hover:text-white text-sm" href="userlogin.html"><p>User</p></a>
+      <hr class="">
+      <a class="hover:bg-black hover:text-white text-sm"  href="vendorlogin.html"><p>Vendor</p></a>
+    </div>
         <div class="flex flex-col md:flex-row w-full max-w-5xl h-auto md:h-[80vh] bg-white rounded-xl shadow-lg overflow-hidden">
             <form 
                 class="flex flex-col px-5 py-7 items-center justify-center w-full md:w-[40%] h-full space-y-4"
@@ -248,6 +254,18 @@
   </footer> 
 
     <script>
+      const loginBox = document.getElementById("loginPromptBox");
+
+const loginBtn = document.getElementById("loginIcon");
+loginBox.style.display="none"
+
+  function toggleBox() {
+     if(loginBox.style.display === "none") {
+      loginBox.style.display = "flex"
+    } else {
+      loginBox.style.display = "none"
+    }
+  }
 
         function updateCartCount() {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];

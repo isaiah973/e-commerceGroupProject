@@ -52,6 +52,26 @@
     </div>
   </nav>
 
+  <!-- ADD TO CART POP UP------------------------- -->
+  <div
+    id="cartPopup"
+    class="top-[7vh] fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50"
+  >
+    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md relative animate-slide-up">
+      <button
+        id="closePopup"
+        class="absolute top-6 right-3 text-gray-600 hover:text-black text-[50px] font-bold"
+      >
+        &times;
+      </button>
+      <a href="myCart.html"><h2 class="text-2xl font-bold mb-2 hover:border-b-4 hover:border-b-[#ffd700] inline-block">Cart</h2></a>
+      <p class="text-teal-700 font-bold">Successfully added to cart!</p>
+      <div id="pagatts-slide" class="animate-ping bg-[#ffd700] h-[4px] w-[107px] ml-14"></div></div>
+    </div>
+  </div>
+
+  <!-- ----------- -->
+
 <section class="px-10">
   <aside id="sidebar" class=" z-[3500] fixed h-[93vh] w-[100%] mt-[-100px] ml-[-40px]">
       <div class="  h-[100vh] w-[100%] bg-white">
@@ -74,7 +94,7 @@
     </aside>
   <h1 class="mt-[100px] text-2xl text-gray-400 font-semibold">MEN</h1>
   <article class="bg-[#FAF9F6] px-[40px] flex items-center justify-center mt-[20px]">
-      <ul id="menList" class="bg-[#FAF9F6]  flex items-center justify-around flex-wrap space-x-10">
+      <ul id="menList" class="bg-[#FAF9F6]  flex items-center justify-around flex-wrap space-x-10 opacity-0 translate-y-10 transition-all duration-700 ease-out">
        
         <!-- <li class="w-[300px] h-[400px] p-[10px]">
           
@@ -88,6 +108,24 @@
 
 </div>
   <script>
+ const cartPopup = document.getElementById("cartPopup");
+    const closePopup = document.getElementById("closePopup");
+    closePopup.addEventListener("click", () => {
+      cartPopup.classList.add("hidden");
+    });
+
+
+window.addEventListener("DOMContentLoaded", () => {
+    const list = document.getElementById("menList");
+    if (list) {
+      // Remove translate-y and opacity on load
+      list.classList.remove("translate-y-10", "opacity-0");
+      list.classList.add("translate-y-0", "opacity-100");
+    }
+  });
+
+
+
 const sidebar = document.getElementById("sidebar");
    sidebar.style.display="none";
   function toggle() {
@@ -614,7 +652,7 @@ function displayMenProducts(menProduct) {
 
       <p class="px-5 text-[18px] text-[#36454F] font-bold mt-7 text-center">${d.title}</p>
 
-      <p class="text-center mt-4 text-2xl font-extralight">&#8358;${d.price}</p>
+      <p class="text-teal-700 text-center mt-4 text-3xl font-bold">&#8358;${d.price}</p>
 
       <div class="flex items-center justify-center mt-5">
         <button id="${d.id}" class="border-[2px] border-[#36454F] text-[15px] px-3 py-1 hover:bg-[#6d898e]">ADD TO CART</button>
@@ -641,7 +679,8 @@ function displayMenProducts(menProduct) {
             }
 
             localStorage.setItem("cart", JSON.stringify(cart));
-            alert(`${d.title} added to cart!`);
+            // alert(`${d.title} added to cart!`);     
+              cartPopup.classList.remove("hidden");
          
           });
      

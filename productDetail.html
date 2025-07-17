@@ -15,7 +15,7 @@
   </head>
   <body>
      <!-- NAVBAR------------------------- -->
-  <nav class="relative sticky top-0 z-[10000] bg-white md:gap-[100px] md:w-full  flex lg:gap-[200px] bg-whitesmoke h-[7vh] lg:px-2.5 px-2 justify-center font-medium items-center shadow-lg">
+  <nav class="relative sticky mb-[50px] top-0 z-[10000] bg-white md:gap-[100px] md:w-full  flex lg:gap-[200px] bg-whitesmoke h-[7vh] lg:px-2.5 px-2 justify-center font-medium items-center shadow-lg">
     <!-- burger menu -->
      <img onclick="toggle()" id="burger" class=" absolute left-5 w-[30px] lg:hidden md:hidden" src="images/burger-bar.png" alt="">
      <!--  -->
@@ -49,6 +49,26 @@
     </div>
   </nav>
 
+     <!-- ADD TO CART POP UP------------------------- -->
+  <div
+    id="cartPopup"
+    class="top-[7vh] fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-[2000]"
+  >
+    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md relative animate-slide-up">
+      <button
+        id="closePopup"
+        class="absolute top-6 right-3 text-gray-600 hover:text-black text-[50px] font-bold"
+      >
+        &times;
+      </button>
+      <a href="myCart.html"><h2 class="text-2xl font-bold mb-2 hover:border-b-4 hover:border-b-[#ffd700] inline-block">Cart</h2></a>
+      <p class="text-teal-700 font-bold">Successfully added to cart!</p>
+      <div id="pagatts-slide" class="animate-ping bg-[#ffd700] h-[4px] w-[107px] ml-14"></div></div>
+    </div>
+  </div>
+
+  <!-- ----------- -->
+
 
 
      <aside id="sidebar" class=" z-[3500] fixed h-[93vh] w-[100%]">
@@ -75,13 +95,13 @@
    <div class="flex items-center justify-center h-[85vh] w-[100%] mt-5">
      <div
       id="modalProduct"
-      class="border-[2px] inset-0 w-[100%] z-[1000] h-[85vh] bg-white flex items-center justify-center shadow-lg m-[h-auto]"
+      class="border-[3px] border-[#ffd700] inset-0 w-[80%] z-[1000] h-[85vh] bg-white flex items-center justify-center m-[h-auto]"
     ></div>
    </div>
 
 
    <!-- footer---------------- -->
- <footer class="footer mt-8">
+ <footer class="footer mt-[300px]">
     <div class="footer-container">
      
       <div class="footer-column">
@@ -161,6 +181,13 @@
     </div>
   </footer> 
     <script>
+       const cartPopup = document.getElementById("cartPopup");
+    const closePopup = document.getElementById("closePopup");
+    closePopup.addEventListener("click", () => {
+      cartPopup.classList.add("hidden");
+    });
+
+
       const sidebar = document.getElementById("sidebar");
    sidebar.style.display="none";
   function toggle() {
@@ -180,34 +207,33 @@
 
         // inject modal content
         modal.innerHTML = `
-        <div class="shadow-lg w-[100%] h-[89%] flex items-center space-x-5 border-[3px] px-4">
-        <div class="flex items-center justify-center w-[400px] h-[400px] bg-white border-[5px] border-[#ffd700] rounded-[1px]">
-          <img class="w-full h-full object-contain" src="${divItem.image}" alt="">
-        </div>
+        <div class="bg-white min-h-16 p-6 flex items-center justify-center">
+        <div class="bg-white rounded-lg shadow-lg max-w-xl w-full grid grid-cols-1 md:grid-cols-2 gap-8 p-6">
+    
+    <!-- Product Image -->
+    <div>
+      <img src="${divItem.image}" alt="Product Image" class="rounded-lg border-2 border-gray-300 w-[200px] h-[450px] object-contain">
+    </div>
 
-        <div class=" space-y-7 w-full h-[100%] py-12 px-5">
-          <span class="px-2 py-1 text-xs mb-[1px] border-[1px] border-black">BACK IN STOCK</span>
-          <p class="font-semibold bg-gray-100 py-2"><strong>Title: </strong>${divItem.title}</p>
-          <p class="text-sm"><strong>Description:</strong> ${divItem.description}</p>
-          <p class="font-bold">&#8358;${divItem.price}</p>
-          <p class="italic">${divItem.shippingInformation}</p>
+    <!-- Product Details -->
+    <div class="flex flex-col justify-between">
+      <div>
+        <h1 class="text-3xl font-bold text-gray-800 mb-2">${divItem.title}</h1>
+        <p class="text-gray-600 mb-4">${divItem.description}</p>
 
-          <div class="mt-3">
-            <p class="text-sm">Size: <span class="text-gray-400">Select</span></p>
-            <div>
-              <button class="border-[2px] border-gray-300 w-[50px] hover:bg-gray-200 text-black">S</button>
-              <button class="border-[2px] border-gray-300 w-[50px] hover:bg-gray-200 text-black">M</button>
-              <button class="border-[2px] border-gray-300 w-[50px] hover:bg-gray-200 text-black">L</button>
-              <button class="border-[2px] border-gray-300 w-[80px] hover:bg-gray-200 text-black">XL/1X</button>
-            </div>
-          </div>
+        <p class="text-xl text-green-600 font-semibold mb-2">\u20A6${divItem.price}</p>
+        <p class="text-sm text-gray-500 mb-4 italic">${divItem.shippingInformation}</span></p>
+      </div>
 
-          <div class="">
-            <button id="addToCart" class="px-[9px] py-[10px] text-white bg-black text-[10px] hover:bg-white hover:text-black hover:border-[1px] hover:border-black">ADD TO CART</button>
-            <button class="px-[9px] py-[10px] text-white bg-black text-[10px] hover:bg-white hover:text-black hover:border-[1px] hover:border-black">Add to Wish List</button>
-          </div>
-        </div>
-      </div> 
+      <!-- Add to Cart Button -->
+      <button id="addToCart" class="mt-4 bg-black hover:bg-gray-700 text-white font-medium py-4 px-4 rounded">
+        Add to Cart
+      </button>
+    </div>
+  </div>
+   </div>
+
+
     `;
 
         // 🔥 Now attach event after the DOM is updated
@@ -224,7 +250,8 @@
             }
 
             localStorage.setItem("cart", JSON.stringify(cart));
-            alert(`${divItem.title} added to cart!`);
+            // alert(`${d.title} added to cart!`);     
+              cartPopup.classList.remove("hidden");
           });
         } else {
           console.warn("Add to Cart button not found!");

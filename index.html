@@ -36,7 +36,7 @@
     <div id="pagatts-slide" class="animate-ping bg-[#ffd700] h-[4px] w-[107px]"></div></div>
     </a>
     <div class=" flex space-x-3 lg:items-center items-end lg:justify-between">
-      <div class="flex mr-[-80px] lg:mr-0 md:mr-0 md:ml-0 lg:ml-0 ml-[100px]"><input placeholder="Search" type="text" class="text-gray-400 border-[1px] md:w-20 lg:w-[200px] w-[100px] border-gray-300 outline-none mr-[5px] pl-2 placeholder:text-sm"><button class="border-[1px] border-gray-300 ml-[-5px] pl-[1px] flex items-center justify-cente"><img class="w-[18px] " src="images/search (1).png" alt=""></button></div>
+      <div class="flex mr-[-80px] lg:mr-0 md:mr-0 md:ml-0 lg:ml-0 ml-[100px]"><input id="searchInput" placeholder="Search" type="text" class="text-gray-400 border-[1px] md:w-20 lg:w-[200px] w-[100px] border-gray-300 outline-none mr-[5px] pl-2 placeholder:text-sm"><button id="searchBtn" class="border-[1px] border-gray-300 ml-[-5px] pl-[1px] flex items-center justify-cente"><img class="w-[18px] " src="images/search (1).png" alt=""></button></div>
      <div class="">
        <div class="hidden lg:flex md:flex flex gap-5 items-center justify-center">
          <img onclick="toggleBox()" id="loginIcon" href="" class="w-[22px] cursor-pointer" src="images/icons8-user-32.png" alt="">
@@ -53,6 +53,25 @@
      </div>
     </div>
   </nav>
+  <!-- ADD TO CART POP UP------------------------- -->
+  <div
+    id="cartPopup"
+    class="top-[7vh] fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50"
+  >
+    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md relative animate-slide-up">
+      <button
+        id="closePopup"
+        class="absolute top-6 right-3 text-gray-600 hover:text-black text-[50px] font-bold"
+      >
+        &times;
+      </button>
+      <a href="myCart.html"><h2 class="text-2xl font-bold mb-2 hover:border-b-4 hover:border-b-[#ffd700] inline-block">Cart</h2></a>
+      <p class="text-teal-700 font-bold">Successfully added to cart!</p>
+      <div id="pagatts-slide" class="animate-ping bg-[#ffd700] h-[4px] w-[107px] ml-14"></div></div>
+    </div>
+  </div>
+
+  <!-- ----------- -->
 <!-- -------HERO----SECTION------------------ -->
   <section class="relative">
     <!-- asides -->
@@ -79,7 +98,7 @@
     <div class="bg-[#cdd3d3] w-full h-[93vh] relative">
         
     </div>
-    <div id="autumn-box" class="absolute sm:top-[0%] top-[4%] md:top-[10%]  lg:top-[15%] sm:left-[10px] z-10 border-[7px] border-[#ffd700] p-[2%] lg:left-[160px]">
+    <div id="autumn-box" class="absolute sm:top-[0%] top-[4%] md:top-[10%]  lg:top-[8vh] sm:left-[10px] z-10 border-[7px] border-[#ffd700] p-[2%] lg:left-[160px]">
       <p class="text-lg font-medium">FROM &#8358;3990</p>
       <p class="text-[50px]">2025</p>
       <p class="text-[70px] w-[430px]">JULY</p>
@@ -159,8 +178,8 @@
 
 <!-- MEN'S CLOTHING -->
   <article>
-    <div>
-      <a href="men.html"><img src="images/men clothing banner.jpg" alt=""></a>
+    <div class="flex items-center justify-center">
+      <a href="men.html"><img class="w-[99%] h-[350px]" src="images/men section.webp" alt=""></a>
 
     </div>
   </article>
@@ -169,7 +188,7 @@
     <p class="text-2xl mb-7 font-bold">Discount</p>
     <div class="flex space-x-3 flex-wrap items-center justify-center">
       <a href="discount.html"><img class="w-[300px]" src="images/men gif.gif" alt=""></a>
-      <a href="discount.html"><img class="w-[600px]" src="images/discount banner1.avif" alt=""></a>
+      <a href="discount.html"><img class="w-[600px]" src="images/july.webp" alt=""></a>
     </div>
   </article>
 
